@@ -1,0 +1,76 @@
+@import "./variables.scss";
+
+.Header {
+  border-bottom: solid 1px #35596c;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  @media (max-width: $lg) {
+    background: #023548;
+  }
+  .HdrInr {
+    background: transparent !important;
+    padding: $mpl + 2 0;
+    .Logo {
+      margin: 0;
+      padding: 0;
+      @media (max-width: $lg) {
+        width: 130px;
+      }
+    }
+    .NavBtn {
+      @media (max-width: $lg) {
+        width: 40px;
+        border-color: #fff;
+        outline: none;
+        box-shadow: none;
+        padding: 0;
+      }
+      span {
+        background-image: url(../../public/assets/download.svg);
+      }
+    }
+    .NavCustom {
+      flex: 0 0 auto;
+      @media (max-width: $lg) {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: #023548;
+        padding: 15px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+      }
+      .NavLink {
+        color: #b6c7c9;
+        font-size: $mpl + 4;
+        font-family: $font-family;
+        padding: $mpl 0;
+        margin-right: $mpl + 35;
+        @media (max-width: $lg) {
+          margin-right: 0;
+          border-bottom: 1px solid #13506e;
+        }
+        &:hover {
+          color: $yellow;
+        }
+      }
+      .NavLinkRt {
+        color: #b6c7c9;
+        font-size: $mpl + 4;
+        font-family: $font-family;
+        padding: $mpl 0;
+        margin-right: $mpl + 20;
+        @media (max-width: $lg) {
+          margin-right: 0;
+          border-bottom: 1px solid #13506e;
+        }
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
