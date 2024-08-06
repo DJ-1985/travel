@@ -8,6 +8,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 const Header: React.FC = () => {
   const [sticky, setSticky] = useState(false);
@@ -28,6 +30,11 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <div className={`${styles.Header} ${sticky ? 'sticky' : ''}`}>
       <Navbar collapseOnSelect expand="lg" className={`${styles.HdrInr} bg-body-tertiary`}>
@@ -45,11 +52,27 @@ const Header: React.FC = () => {
             </Nav>
             <Nav>
               <Nav.Link href="#" className={styles.NavLinkRt}><Image src="/assets/call-icon.png" alt="" /> (000) 123 456 789</Nav.Link>
-              <Nav.Link href="#" className={styles.NavLinkRt}><Image src="/assets/user-icon-trvl.png" alt="" /> Sign In</Nav.Link>
+              <Nav.Link className={styles.NavLinkRt} onClick={handleShow}><Image src="/assets/user-icon-trvl.png" alt="" /> Sign In</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
     </div>
   );
 };

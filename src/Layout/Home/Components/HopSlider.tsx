@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import "../../../styles/Home/hopSlider.scss";
-import { Col, Row } from "react-bootstrap";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
