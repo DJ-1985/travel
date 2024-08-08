@@ -139,7 +139,9 @@ select.form-control {
   line-height: 45px;
   background: $white url(../../public/assets/arrow2.png) no-repeat center right 16px;
 }
-
+.text-right{
+  text-align: right;
+}
 .container {
   width: 100%;
   max-width: 1300px;
@@ -321,4 +323,7 @@ select.form-control {
 }
 .slick-dots li button:before{
   font-size: 12px !important;
+}
+.modal-backdrop.show {
+  opacity: 0.5;
 }

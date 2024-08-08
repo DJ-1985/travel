@@ -30,7 +30,7 @@ function FlightBookingLeftSide() {
             <Card className={styles.CardInfo}>
               <div className={`${styles.FlyerNameInfo} d-flex align-items-center`}>
                  <Image src="/assets/user.png" className={"me-3"} alt="img"/> Traveller 1: Adult
-              </div>
+              </div> 
               <Form>
                 <Row>
                   <Col md={4}>
