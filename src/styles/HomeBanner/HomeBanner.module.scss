@@ -335,7 +335,38 @@
               width: 100%;
             }
             .TrvlDropDown {
-              border-radius: 0;
+              border-radius: 15px 0 15px 15px;
+              right: 0 !important;
+              transform: inherit !important;
+              left: auto !important;
+              top: 100% !important;
+              margin: 0 !important;
+              border: none;
+              padding: 0;
+              min-width: 390px;
+              box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+              z-index: 5;
+              .TrvlTopBox {
+                padding: 20px;
+              }
+              .TrvlBtmBox {
+                background-color: #f2f2f2;
+                padding: 20px;
+                text-align: right;
+              }
+              .ApplyBtn {
+                height: 50px;
+                line-height: 50px;
+                border-radius: 50px;
+                min-width: 150px;
+                background-color: $green;
+                border-color: $green;
+                padding: 0;
+                &:hover {
+                  background: $blue;
+                  color: $white;
+                }
+              }
             }
           }
           &.FrmWd5 {

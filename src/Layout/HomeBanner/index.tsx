@@ -1,20 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState } from 'react';
 
 import styles from "@/styles/HomeBanner/HomeBanner.module.scss";
-import Nav from "react-bootstrap/Nav";
-import Tab from "react-bootstrap/Tab";
-import Image from "react-bootstrap/Image";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Dropdown from "react-bootstrap/Dropdown";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-
+import {Nav,Tab,Image,Form,Button,Dropdown,Row,Col } from "react-bootstrap";
+ 
 import HomeBnrCard from "@/Layout/HomeBanner/HomeBnrCard";
 
 function HomeBanner() {
+
   return (
     <div className={styles.BannerHome}>
       <div className={"container"}>
@@ -107,9 +101,15 @@ function HomeBanner() {
                           Travellers <span>2 Adults</span>
                         </Dropdown.Toggle>
                         <Dropdown.Menu className={styles.TrvlDropDown}>
-                          <Dropdown.Item href="#">Action</Dropdown.Item>
-                          <Dropdown.Item href="#">Another action</Dropdown.Item>
-                          <Dropdown.Item href="#">Something else</Dropdown.Item>
+                          <div className={styles.TrvlTopBox}>
+                            <Form.Group className={`${styles.inputPrdBlock} d-flex align-items-center justify-content-between`}>
+                              <Form.Label htmlFor=""></Form.Label> 
+                                dfgfgf
+                            </Form.Group>
+                          </div>
+                          <div className={styles.TrvlBtmBox}>
+                             <Button className={styles.ApplyBtn}>Apply</Button>
+                          </div>
                         </Dropdown.Menu>
                       </Dropdown>
                     </div>
@@ -192,7 +192,7 @@ function HomeBanner() {
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="Car">
-                Car
+                Car 
               </Tab.Pane>
               <Tab.Pane eventKey="Cruises">
                 Cruises

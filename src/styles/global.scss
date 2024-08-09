@@ -1,4 +1,4 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 @import "./variables.scss";
 
 body {
@@ -137,9 +137,10 @@ select.form-control {
   padding: 0 $mpl + 6;
   height: 45px !important;
   line-height: 45px;
-  background: $white url(../../public/assets/arrow2.png) no-repeat center right 16px;
+  background: $white url(../../public/assets/arrow2.png) no-repeat center right
+    16px;
 }
-.text-right{
+.text-right {
   text-align: right;
 }
 .container {
@@ -293,7 +294,7 @@ select.form-control {
 .modal-backdrop.show {
   opacity: 0.2;
 }
-.sticky{
+.sticky {
   background: #023548;
 }
 
@@ -321,9 +322,22 @@ select.form-control {
     transition: none !important;
   }
 }
-.slick-dots li button:before{
+.slick-dots li button:before {
   font-size: 12px !important;
 }
 .modal-backdrop.show {
   opacity: 0.5;
+}
+.required {
+  color: red;
+  font-size: 13px;
+  margin: 3px 0 0;
+  border-color: red !important;
+}
+#input-group-dropdown-1,
+button.dropdown-toggle.show.btn.btn-outline-secondary {
+  background: #fff;
+  color: #000;
+  border-color: #dfdfdf;
+  border-radius: 10px 0 0 10px;
 }

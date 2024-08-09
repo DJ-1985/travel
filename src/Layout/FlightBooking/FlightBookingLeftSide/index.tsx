@@ -66,7 +66,7 @@ function FlightBookingLeftSide() {
                     id={`1`}
                     label={`Add checked bag `}
                     className={styles.CustomCHK}
-                  />                  
+                  />                   
                 </div>
               ))}
               <span className={`${styles.CustomCHKColorText}`}>+ INR7,960.34  Max weight 23 kg</span>        
@@ -137,7 +137,7 @@ function FlightBookingLeftSide() {
                     <Col md={12}>
                     <Form.Group className="mb-3">
                       <Form.Label className={styles.FormLabel}>Phone Number*</Form.Label>
-                      <InputGroup className="mb-3">
+                      <InputGroup className="mb-3"> 
                       <DropdownButton
                         className={`${styles.FormControlGray} mb-2`}
                         variant="outline-secondary"
