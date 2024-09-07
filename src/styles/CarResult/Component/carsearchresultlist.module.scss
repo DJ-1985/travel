@@ -1,0 +1,144 @@
+@import "../../variables.scss";
+
+.carSrchResultList {
+  .carSrchTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .carSrchTopLt {
+      h2 {
+        font-size: 18px;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .carSrchTopRt {
+      width: 225px;
+      border: 1px solid #d5e0eb;
+      padding: 4px 10px;
+      border-radius: 10px;
+      label {
+        font-size: 12px;
+        margin: 0;
+        display: block;
+      }
+      select {
+        border: 0;
+        padding: 0 2px;
+        font-size: 15px;
+        background-position: right center;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+  .carResultCard {
+    border: solid 1px #d5e0eb;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    @media (max-width: $xl) {
+      display: block;
+    }
+    .carResultCardLt {
+      flex: auto;
+      display: flex;
+      padding: 20px;
+      @media (max-width: $xl) {
+        padding: 15px;
+      }
+      @media (max-width: $md) {
+        display: block;
+      }
+      .carResultImg {
+        width: 220px;
+        min-width: 220px;
+        @media (max-width: $md) {
+          width: 100%;
+          min-width: 100%;
+        }
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+      }
+      .carResultInfo {
+        flex: auto;
+        padding: 0 20px;
+        @media (max-width: $md) {
+          padding: 10px 0 0;
+        }
+        h3 {
+          font-size: 20px;
+          margin: 0 0 5px;
+        }
+        p {
+          color: #219ebc;
+          font-size: 12px;
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+          border: none;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: inherit;
+          li {
+            margin: 0 0 10px;
+            padding: 0;
+            border: none;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            img {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+    .carResultCardRt {
+      width: 240px;
+      min-width: 240px;
+      border-left: solid 1px #d5e0eb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: $xl) {
+        width: 100%;
+        min-width: 100%;
+        border-left: none;
+        border-top: solid 1px #d5e0eb;
+        padding: 15px;
+      }
+      .carRentalPrc {
+        font-size: 22px;
+        color: #219ebc;
+        margin: 0 0 10px;
+        span {
+          display: block;
+          font-size: 12px;
+          color: #000;
+        }
+      }
+      .nav1,
+      .nav2 {
+        display: block;
+        font-size: 12px;
+        margin-top: 10px;
+        color: #4bae4f;
+        &:hover {
+          color: #000;
+        }
+      }
+      .nav2 {
+        color: #21afbc;
+      }
+    }
+  }
+}

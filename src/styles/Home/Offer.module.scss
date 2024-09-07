@@ -2,13 +2,13 @@
 
 .OfferOuter {
   background-color: $white;
-  padding: 0 15px 20px;
+  padding: 0 $mpl + 5 $mpl + 10;
   .OfferTextBox {
-    padding: 20px;
+    padding: $mpl + 10;
     border-radius: 10px;
     border: 1px solid #ddd;
     @media (max-width: $md) {
-      margin-bottom: 15px;
+      margin-bottom: $mpl + 5;
     }
   }
   .SrchFlightBtn {
@@ -16,7 +16,7 @@
     border-radius: 5px;
     font-size: $mpl + 4;
     color: $white;
-    padding: 7px 20px;
+    padding: 7px $mpl + 10;
     display: inline-block;
     &:hover {
       background-color: $blue;
@@ -49,9 +49,9 @@
         rgba(5, 43, 57, 0.65) 0%,
         rgba(0, 0, 0, 0) 150%
       );
-      padding: 15px 15px 0;
+      padding: $mpl + 5 $mpl + 5 0;
       h4 {
-        margin: 0 0 10px;
+        margin: 0 0 $mpl;
       }
       * {
         color: $white;
@@ -63,10 +63,10 @@
       }
     }
   }
-  .RowMrg{
-    margin-top: 40px;
+  .RowMrg {
+    margin-top: $mpl + 30;
     @media (max-width: $md) {
-      margin-top: 15px;
+      margin-top: $mpl + 5;
     }
   }
 }

@@ -5,7 +5,7 @@ import { Form, Card, CardGroup, Figure, Nav, Image, ListGroup } from 'react-boot
 import styles from "@/styles/HotelResult/HotelResultRightSideBar.module.scss";
 
 
-function HotelResultRightSideBar() {
+function HotelResultRightSideBar() { 
   return (
     
       <div className={styles.HotelRightSideBar}>
@@ -180,7 +180,7 @@ function HotelResultRightSideBar() {
                   <a href="#" className={styles.hotellocationMapLink}>Show on map</a>
                  </div>
                  <div className= {styles.HotelRatingBox}>
-                   <Image src="/assets/rating-1.png" alt="img"/>                
+                   <Image src="/assets/rating-1.png" alt="img"/>
                    <div className={`${styles.HotelRatingParameter} d-flex flex-wrap align-items-center`}>
                     <span className={`${styles.HotelRatingValue} pe-2`}>4.5</span>
                      <Image src="/assets/trust-plt.png" className={"pe-2"} alt="img"/>
@@ -191,7 +191,7 @@ function HotelResultRightSideBar() {
                 <ListGroup as="ul" className= {`${styles.HotelServicesList} d-flex flex-wrap`}>
                   <ListGroup.Item as="li"> <Image src="/assets/hotel-services-icon-1.png" alt="img"/> Breakfast Included</ListGroup.Item>
                   <ListGroup.Item as="li"> <Image src="/assets/hotel-services-icon-2.png" alt="img"/> Pool</ListGroup.Item>
-                  <ListGroup.Item as="li"> <Image src="/assets/hotel-services-icon-3.png" alt="img"/> Hot Tub</ListGroup.Item>                 
+                  <ListGroup.Item as="li"> <Image src="/assets/hotel-services-icon-3.png" alt="img"/> Hot Tub</ListGroup.Item>                
                 </ListGroup>
               </div> 
             </Card>

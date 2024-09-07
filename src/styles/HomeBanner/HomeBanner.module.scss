@@ -34,7 +34,7 @@
             width: 250px;
             background-size: cover;
           }
-        }
+        } 
       }
     }
     h6 {
@@ -196,7 +196,9 @@
             border-radius: 0;
             padding: 0;
             font-family: $font-family;
-            background: none;
+            background: transparent;
+            width: 100%;
+            outline: none;
             @media (max-width: $xl) {
               font-size: $mpl + 3;
               height: 30px;
@@ -257,6 +259,7 @@
           &.FrmWd1 {
             width: 20%;
             padding: $mpl + 15 $mpl + 5 0;
+            position: relative;
             @media (max-width: $xl) {
               padding: $mpl + 5 $mpl 0;
             }
@@ -272,6 +275,7 @@
           &.FrmWd2 {
             width: 20%;
             padding: $mpl + 15 $mpl + 5 0;
+            position: relative;
             @media (max-width: $xl) {
               padding: $mpl + 5 $mpl 0;
             }
@@ -296,8 +300,7 @@
               display: flex;
             }
             .FrmWdDT1 {
-              width: 50%;
-              border-right: solid 1px #ebe6de;
+              flex: auto;
               padding: $mpl + 15 $mpl + 5 0;
               background: url(../../../public/assets/cald-icon.png) no-repeat
                 right 15px center;
@@ -305,13 +308,17 @@
                 padding: $mpl + 5 $mpl 0;
                 background-position: right 10px center;
                 background-size: 16px auto;
+              }
+              @media (max-width: $lg) {
+                position: relative;
               }
               @media (max-width: $md) {
                 padding: 5px 15px;
               }
             }
             .FrmWdDT2 {
-              width: 50%;
+              flex: auto;
+              border-left: solid 1px #ebe6de;
               padding: $mpl + 15 $mpl + 5 0;
               background: url(../../../public/assets/cald-icon.png) no-repeat
                 right 15px center;
@@ -322,8 +329,20 @@
               }
               @media (max-width: $md) {
                 padding: 5px 15px;
+                position: relative;
               }
             }
+            .clockIcon {
+              background: url(../../../public/assets/clock-icon2.png) no-repeat
+                right 15px center;
+              @media (max-width: $xl) {
+                background-position: right 10px center;
+                background-size: 16px auto;
+              }
+            }
+          }
+          &.bdrNone{
+            border-right: none;
           }
           &.FrmWd4 {
             width: 15%;
@@ -335,24 +354,114 @@
               width: 100%;
             }
             .TrvlDropDown {
-              border-radius: 15px 0 15px 15px;
+              border-radius: 0;
               right: 0 !important;
               transform: inherit !important;
               left: auto !important;
               top: 100% !important;
               margin: 0 !important;
-              border: none;
+              border: 1px solid #ebe6de;
               padding: 0;
               min-width: 390px;
               box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
               z-index: 5;
+              @media (max-width: $xl) {
+                min-width: 320px;
+              }
+              @media (max-width: $md) {
+                min-width: inherit;
+                width: 100%;
+              }
               .TrvlTopBox {
                 padding: 20px;
+                background-color: #fff;
+                max-height: 300px;
+                overflow-y: auto;
+                @media (max-width: $xl) {
+                  padding: 10px;
+                  p {
+                    font-size: 12px;
+                    line-height: normal;
+                  }
+                }
+                .inputPrdBlock {
+                  margin: 0 0 15px;
+                  @media (max-width: $xl) {
+                    margin: 0 0 12px;
+                  }
+                  label {
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    @media (max-width: $xl) {
+                      font-size: 13px;
+                    }
+                    img {
+                      padding-right: 10px;
+                    }
+                  }
+                  .grpOuter {
+                    margin: 0;
+                    width: 152px;
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    flex-wrap: inherit;
+                    align-items: center;
+                    overflow: hidden;
+                    input {
+                      margin: 0;
+                      border: none;
+                      border-left: 1px solid #ddd;
+                      border-right: 1px solid #ddd;
+                      padding: 0;
+                      width: 70px;
+                      @media (max-width: $xl) {
+                        height: 40px;
+                      }
+                    }
+                    button {
+                      margin: 0;
+                      border: none;
+                      outline: none;
+                      box-shadow: none;
+                      padding: 0;
+                      font-size: 20px;
+                      width: 40px;
+                      height: 50px;
+                      background-color: #fff;
+                      @media (max-width: $xl) {
+                        height: 40px;
+                      }
+                      &:hover {
+                        background-color: #21afbc;
+                      }
+                    }
+                  }
+                }
+                .sltdPrdBlock {
+                  display: flex;
+                  flex-wrap: wrap;
+                  .wdEqual {
+                    width: 46%;
+                    margin: 0 2% 10px;
+                    select {
+                      width: 100%;
+                      font-size: 13px;
+                      outline: none;
+                      box-shadow: none;
+                      margin: 0;
+                      height: 40px;
+                    }
+                  }
+                }
               }
               .TrvlBtmBox {
                 background-color: #f2f2f2;
                 padding: 20px;
                 text-align: right;
+                @media (max-width: $xl) {
+                  padding: 10px;
+                }
               }
               .ApplyBtn {
                 height: 50px;
@@ -362,6 +471,12 @@
                 background-color: $green;
                 border-color: $green;
                 padding: 0;
+                @media (max-width: $xl) {
+                  height: 40px;
+                  line-height: 40px;
+                  min-width: 100px;
+                  font-size: 14px;
+                }
                 &:hover {
                   background: $blue;
                   color: $white;
@@ -378,9 +493,43 @@
             @media (max-width: $md) {
               width: 100%;
             }
+            .sltdClass {
+              margin: 0;
+              transform: inherit !important;
+              top: 100% !important;
+              right: auto !important;
+              left: 0 !important;
+              border-radius: 0;
+              border-color: #ebe6de;
+              min-width: 180px;
+              min-height: 180px;
+              @media (max-width: $xl) {
+                min-height: 140px;
+              }
+              @media (max-width: $md) {
+                width: 100%;
+              }
+              a {
+                font-size: 14px;
+                padding: 8px 15px;
+                @media (max-width: $xl) {
+                  font-size: 12px;
+                  padding: 5px 10px;
+                }
+                &:hover {
+                  background-color: #d5f9fc;
+                  color: #000;
+                }
+                &.active {
+                  background-color: #21afbc;
+                  color: #fff;
+                }
+              }
+            }
           }
           &.FrmWd11 {
             width: 30%;
+            position: relative;
             @media (max-width: $md) {
               width: 100%;
             }
@@ -389,6 +538,69 @@
             width: 40%;
             @media (max-width: $md) {
               width: 100%;
+            }
+          }
+          &.FrmWd1,
+          &.FrmWd2 {
+            position: relative;
+            .sgstBox {
+              position: relative;
+              .SrchInput {
+                margin: 0;
+                &::placeholder {
+                  color: #000;
+                  opacity: 1;
+                }
+              }
+              .SrchClose {
+                margin: 0;
+                position: absolute;
+                right: -7px;
+                top: 12px;
+                background: #fff;
+                width: 22px;
+                height: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                @media only screen and (max-width: $xl) {
+                  top: 6px;
+                }
+              }
+              .suggestionsOuter {
+                margin: 0;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                background: #fff;
+                margin-top: 15px;
+                width: 280px;
+                padding: 0;
+                display: block;
+                border-radius: 0 0 8px 8px;
+                max-height: 300px;
+                overflow-y: auto;
+                z-index: 5;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
+                @media only screen and (max-width: $xl) {
+                  margin-top: 10px;
+                }
+                @media only screen and (max-width: $lg) {
+                  margin-top: 0;
+                  width: 100%;
+                }
+                .suggestionsItem {
+                  margin: 2px 5px;
+                  cursor: pointer;
+                  padding: 5px 10px;
+                  display: block;
+                  font-size: 13px;
+                  &:hover {
+                    background-color: #d5f9fc;
+                  }
+                }
+              }
             }
           }
         }
@@ -411,6 +623,8 @@
           justify-content: center;
           border-radius: 10px;
           box-shadow: none;
+          position: relative;
+          overflow: hidden;
           &:hover {
             background: $yellow;
           }
@@ -473,4 +687,9 @@
       margin: 30px 0 0;
     }
   }
+}
+
+.selectAgeBox {
+  width: 150px;
+  box-sizing: border-box;
 }

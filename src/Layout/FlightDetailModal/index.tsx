@@ -1,14 +1,19 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
-const FlightDetailModal = ({ showModal, handleClose }) => {
+interface FlightDetailModalProps {
+  showModal: boolean;
+  handleClose: () => void;
+}
+
+const FlightDetailModal: React.FC<FlightDetailModalProps> = ({ showModal, handleClose }) => {
   return (
     <Modal show={showModal} onHide={handleClose}>
       <Modal.Header closeButton>
         <Modal.Title>Modal heading</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        Woohoo, you're reading this text in a modal!
+        Woohoo, you&apos;re reading this text in a modal!
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={handleClose}>

@@ -8,11 +8,11 @@
   }
   .FaqImg{
     @media (max-width: $md) {
-      margin-bottom: 20px;
+      margin-bottom: $mpl + 10;
     }
   }
   .CustomAccordion {
-    margin: 0 0 15px;
+    margin: 0 0 $mpl + 5;
     border-radius: 10px;
     border: 1px solid #ddd;
     .CustomAccordionHdr {

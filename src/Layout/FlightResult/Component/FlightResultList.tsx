@@ -12,19 +12,25 @@ function FlightResultList() {
   const handleShow = () => setShow(true);
   return (
     <div className={styles.FlightOuter}>
-    <h1> New Delhi: 1,824 properties found </h1>
-          <div className={`${styles.HotelSortBox} d-flex align-items-center flex-wrap mb-4`}>
-            <p>Prices displayed include taxes and may change based on availability. You can review any additional fees before checkout. Prices are not final until you complete your purchase.</p>
-            <div className={styles.HotelSortItem}>
-              <div className={styles.HotelSortLabel}>Sort by</div>             
-              <Form.Select>
-                <option>Recommended</option>
-                <option value="1">Low to High</option>
-                <option value="2">High to low</option>
-                <option value="3">Lowest price</option>
-              </Form.Select>
-            </div>
-          </div>
+      <h1> New Delhi: 1,824 properties found </h1>
+      <div
+        className={`${styles.HotelSortBox} d-flex align-items-center flex-wrap mb-4`}
+      >
+        <p>
+          Prices displayed include taxes and may change based on availability.
+          You can review any additional fees before checkout. Prices are not
+          final until you complete your purchase.
+        </p>
+        <div className={styles.HotelSortItem}>
+          <div className={styles.HotelSortLabel}>Sort by</div>
+          <Form.Select>
+            <option>Recommended</option>
+            <option value="1">Low to High</option>
+            <option value="2">High to low</option>
+            <option value="3">Lowest price</option>
+          </Form.Select>
+        </div>
+      </div>
       <div className={styles.FlightResult}>
         <div className={styles.FlightInfoBlock}>
           <div className={styles.FlightResultRow}>
@@ -245,6 +251,7 @@ function FlightResultList() {
                       <b>DEL · Delhi International Airport</b>
                     </p>
                   </div>
+                  <div className={styles.FlightStatus}>Non Stop</div>
                   <div className={styles.FlightDateTime}>
                     <i>
                       <Image src="/assets/arrivals.png" alt="img" />
@@ -275,6 +282,9 @@ function FlightResultList() {
                       Mon, Aug 19 · 2:45 AM{" "}
                       <b>DEL · Delhi International Airport</b>
                     </p>
+                  </div>
+                  <div className={styles.FlightStatus}>
+                    2 stop via New Delhi,Surat
                   </div>
                   <div className={styles.FlightDateTime}>
                     <i>

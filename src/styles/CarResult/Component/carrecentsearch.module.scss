@@ -1,0 +1,56 @@
+@import "../../variables.scss";
+
+.recentSlider {
+  margin: 0;
+  h3 {
+    font-size: 20px;
+    margin: 0;
+    padding: 20px 0;
+  }
+  .recentSrchCarCard {
+    border: 1px solid #d5e0eb;
+    border-radius: 10px;
+    padding: 10px;
+    .recentSrchCarImg {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    h4 {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      border: none;
+      flex-direction: inherit;
+      align-items: center;
+      li {
+        margin: 0 10px 0 0;
+        padding: 0;
+        border: none;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+    .recentCarPrc {
+      border-top: 1px solid #d5e0eb;
+      padding: 10px 0 0;
+      margin: 10px 0 0;
+      text-align: right;
+      color: #219ebc;
+      font-size: 16px;
+      span {
+        color: #000;
+        font-size: 12px;
+        margin-right: 5px;
+      }
+    }
+  }
+}

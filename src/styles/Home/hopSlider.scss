@@ -3,17 +3,17 @@
 .hopSliderSec {
   background-color: $white;
   position: relative;
-  padding: 70px 0;
+  padding: $mpl + 60 0;
   @media (max-width: $lg) {
-    padding: 40px 0;
+    padding: $mpl + 30 0;
   }
 
   .heading {
-    margin-bottom: 35px;
+    margin-bottom: $mpl + 25;
     text-align: center;
     @media (max-width: $md) {
-      margin-bottom: 20px;
-      padding: 0 12px;
+      margin-bottom: $mpl + 10;
+      padding: 0 $mpl + 2;
     }
   }
   .container {
@@ -36,32 +36,32 @@
       }
       &.slick-prev {
         background-image: url(../../../public/assets/slider_arrow_left.png);
-        left:20px;
+        left: 20px;
         position: absolute;
         z-index: 99;
       }
       &.slick-next {
-        right:20px;
+        right: 20px;
         position: absolute;
         z-index: 99;
         background-image: url(../../../public/assets/slider_arrow_right.png);
       }
-      &:hover{
+      &:hover {
         opacity: 1;
       }
     }
 
     .item {
-      padding: 0 15px;
+      padding: 0 $mpl + 5;
     }
   }
 
   .hopSliderCol {
     border: 1px solid $greyd5;
     border-radius: 10px;
-    padding: 20px;
+    padding: $mpl + 10;
     .hopSliderImg {
-      margin-bottom: 15px;
+      margin-bottom: $mpl + 5;
       position: relative;
       width: 100%;
       height: 100%;
@@ -80,7 +80,7 @@
       .offerLabel {
         background-color: $yellow;
         border-radius: 30px;
-        padding: 7px 20px;
+        padding: 7px $mpl + 10;
         color: $white;
         text-align: center;
         position: absolute;
@@ -93,7 +93,7 @@
       .hopSliderinfoInner {
         position: relative;
         h4 {
-          font-size: 18px;
+          font-size: $mpl + 8;
           margin-bottom: 0;
         }
         .viewDetailLink {
@@ -103,13 +103,13 @@
           color: $green;
           background: url(../../../public/assets/right_arrow.png) no-repeat
             right center;
-          padding: 0px 35px 0px 0;
+          padding: 0 $mpl + 25 0 0;
           &:hover {
             opacity: 0.8;
           }
           @media (max-width: $lg) {
             background-size: 15px;
-            padding-right: 18px;
+            padding-right: $mpl + 8;
           }
         }
       }
@@ -118,6 +118,6 @@
 
   .sliderBtnRow {
     text-align: center;
-    margin-top: 50px;
+    margin-top: $mpl + 40;
   }
 }

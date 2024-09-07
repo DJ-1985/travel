@@ -3,9 +3,9 @@
 .aboutUsSec {
   background-color: $greyf2;
   position: relative;
-  padding: 70px 0;
+  padding: $mpl + 60 0;
   @media (max-width: $lg) {
-    padding: 40px 0;
+    padding: $mpl + 30 0;
   }
 
   .heading {
@@ -32,7 +32,7 @@
 
   .aboutUsSecImg {
     @media (max-width: $lg) {
-      margin-bottom: 35px;
+      margin-bottom: $mpl + 25;
     }
   }
   .rightCol {
@@ -40,7 +40,7 @@
       .aboutUsSecItem {
         display: flex;
         align-items: flex-start;
-        margin-top: 30px;
+        margin-top: $mpl + 20;
         position: relative;
         &:last-child {
           padding-bottom: 0px;

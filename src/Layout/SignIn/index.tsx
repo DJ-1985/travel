@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Button, Form, FormLabel } from "react-bootstrap";
+import { Button, Form, FormLabel, Image } from "react-bootstrap";
 import styles from "@/styles/SignIn/SignIn.module.scss";
 import Preloader from "../Preloader";
 
@@ -10,7 +10,7 @@ function SignInPage() {
   return (
     <>
       <div className={styles.SignBoxOuter}>
-        <Preloader/>
+        {/* <Preloader/> */}
         <div className={"container"}>
           <div className={styles.SignBoxInr}>
             <div className={"mb-3 text-center"}>
@@ -41,7 +41,8 @@ function SignInPage() {
             <div className={"mb-3"}>
               <h3>Let’s confirm your email</h3>
               <p>
-                To continue, enter the secure code we sent to<br />
+                To continue, enter the secure code we sent to
+                <br />
                 deepak.jangid@dotsquares.com. <br />
                 Check junk mail if it’s not in your inbox.
               </p>
@@ -55,7 +56,7 @@ function SignInPage() {
               />
             </Form.Group>
             <Form.Group className={styles.FormGroup}>
-              {["checkbox"].map((type) => (
+              {["checkbox"].map((type:any) => (
                 <div key={`default-${type}`}>
                   <Form.Check
                     type={type}
@@ -75,8 +76,11 @@ function SignInPage() {
               </p>
             </Form.Group>
             <Form.Group className={`${styles.FormGroup} text-center`}>
-              <Button className={`${styles.SigninBtn} globalBtn`}>
+              <Button className={`${styles.SigninBtn} globalBtn btn-overlay`}>
                 Sign In
+                <div className={"btn-ldr"}>
+                  <Image src="/assets/loader.gif" alt="" />
+                </div>
               </Button>
             </Form.Group>
             <Form.Group className={`${styles.FormGroup} text-center`}>
@@ -124,7 +128,7 @@ function SignInPage() {
               />
             </Form.Group>
             <Form.Group className={styles.FormGroup}>
-              {["checkbox"].map((type) => (
+              {["checkbox"].map((type:any) => (
                 <div key={`default-${type}`}>
                   <Form.Check
                     type={type}
@@ -150,12 +154,12 @@ function SignInPage() {
             </Form.Group>
             <Form.Group className={`${styles.FormGroup} text-center`}>
               <a href="#" className={styles.Link_btn}>
-              Forgot Password?
+                Forgot Password?
               </a>
             </Form.Group>
             <Form.Group className={`${styles.FormGroup} text-center`}>
               <a href="#" className={styles.Link_btn}>
-              Send a secure code via email
+                Send a secure code via email
               </a>
             </Form.Group>
           </div>

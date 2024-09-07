@@ -7,7 +7,7 @@ import SiteBreadcrumb from "../GLobal/Breadcrumb";
 import styles from "@/styles/HotelResult/HotelResult.module.scss";
 import SideBar from "../SideBar";
 
-
+ 
 function HotelResult() {
   return (
       <div className={styles.HotelResultPage}>
@@ -15,7 +15,7 @@ function HotelResult() {
           <SiteBreadcrumb/>
           <Row>
             <Col className={styles.HotelResultLeft}>
-              <div className={styles.ShowMap}>
+              <div className={styles.ShowMap}> 
                <Image src="/assets/map.png" className={styles.MapImg} alt="img" />
                <div className={styles.ShowMapTop}>
                   <Image src="/assets/location-pin.png" alt="img" />

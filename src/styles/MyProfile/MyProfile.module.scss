@@ -1,0 +1,1709 @@
+@import "../variables.scss";
+
+.myAccountOuter {
+  background-color: $white;
+  padding: 70px 0;
+  @media (max-width: $lg) {
+    padding: 40px 0;
+  }
+  .userDtlProfile {
+    background-color: $white;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 15px;
+    border: 1px solid #d5e0eb;
+    position: sticky;
+    top: 110px;
+    @media (max-width: $lg) {
+      position: relative;
+      top: auto;
+      margin-bottom: 20px;
+    }
+    .myAccountNav {
+      display: block;
+      li {
+        margin-bottom: 5px;
+        @media (max-width: $lg) {
+          margin-bottom: 2px;
+        }
+        &:last-child {
+          border: none;
+        }
+        a {
+          display: flex;
+          color: #000;
+          align-items: center;
+          padding: 10px 15px;
+          border-radius: 8px;
+          font-size: 16px;
+          font-weight: 600;
+          position: relative;
+          @media (max-width: $lg) {
+            font-size: 14px;
+            padding: 8px 15px;
+          }
+          img {
+            padding-right: 15px;
+            transition: all 0.3s ease;
+            @media (max-width: $lg) {
+              padding-right: 10px;
+              width: 27px;
+            }
+          }
+          &.navActive,
+          &:hover {
+            background-color: $orange;
+            color: #fff;
+            img {
+              filter: invert(100%);
+            }
+          }
+          .subNavBtn {
+            position: absolute;
+            right: 0;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            img {
+              padding: 0;
+              width: auto;
+            }
+          }
+        }
+        &.subNav {
+          ul {
+            display: block;
+            @media (max-width: $lg) {
+              display: none;
+            }
+            li {
+              &:first-child {
+                margin-top: 10px;
+              }
+              a {
+                font-size: 14px;
+                padding: 8px;
+                border-radius: 5px;
+                margin-left: 54px;
+                @media (max-width: $lg) {
+                  font-size: 13px;
+                  padding: 5px 10px;
+                  margin-left: 38px;
+                }
+                img {
+                  padding-right: 10px;
+                }
+              }
+            }
+          }
+          a {
+            .subNavBtn {
+              transform: rotate(180deg);
+              @media (max-width: $lg) {
+                transform: rotate(0deg);
+              }
+            }
+          }
+        }
+        &.openNav {
+          ul {
+            display: none;
+            @media (max-width: $lg) {
+              display: block;
+            }
+          }
+          a {
+            .subNavBtn {
+              transform: rotate(0deg);
+              @media (max-width: $lg) {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .cmnCard {
+    background-color: $white;
+    border: 1px solid #d5e0eb;
+    padding: 20px;
+    border-radius: 15px;
+    @media (max-width: $md) {
+      padding: 15px;
+    }
+    &.profileBg {
+      background-image: url(../../../public/assets/profile-bg.jpg);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 100% auto;
+      padding-bottom: 130px;
+      @media (max-width: $lg) {
+        background-image: none;
+        padding-bottom: 20px;
+      }
+      @media (max-width: $md) {
+        padding-bottom: 15px;
+      }
+    }
+    h2 {
+      font-size: 24px;
+      @media (max-width: $md) {
+        font-size: 20px;
+      }
+    }
+    h3 {
+      font-size: 20px;
+      @media (max-width: $md) {
+        font-size: 18px;
+      }
+    }
+    h4 {
+      font-size: 18px;
+      @media (max-width: $md) {
+        font-size: 16px;
+      }
+    }
+    .profileTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #d5e0eb;
+      padding: 0 0 20px;
+      margin: 0 0 20px;
+      h2 {
+        margin: 0;
+      }
+    }
+    .btnYellow {
+      min-width: inherit;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      img {
+        padding-right: 8px;
+        width: 26px;
+      }
+    }
+    .userProfileInfo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      @media (max-width: $lg) {
+        height: auto;
+        margin-bottom: 15px;
+      }
+      .userProfilePic {
+        position: relative;
+        width: 170px;
+        height: 170px;
+        img {
+          border-radius: 50%;
+          width: 100%;
+          height: 170px;
+          object-fit: cover;
+        }
+        .fileBtn {
+          position: absolute;
+          right: 15px;
+          bottom: 0;
+          background: #21afbc url(../../../public/assets/camera.png) no-repeat
+            center center;
+          width: 38px;
+          height: 38px;
+          overflow: hidden;
+          border-radius: 50%;
+          input {
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            cursor: pointer;
+            opacity: 0;
+          }
+        }
+      }
+    }
+    .userProfileInfoRt {
+      border-left: 1px solid #d5e0eb;
+      padding-left: 30px;
+      padding-top: 20px;
+      @media (max-width: $lg) {
+        padding-left: 0;
+        border: none;
+      }
+      .rowBdr {
+        border-bottom: 1px solid #d5e0eb;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        &.bdr0 {
+          border: none;
+        }
+        .formGrp {
+          margin: 0;
+          position: relative;
+          padding: 0 0 0 50px;
+          background-repeat: no-repeat;
+          background-position: left 6px;
+          @media (max-width: $md) {
+            background-size: 20px auto;
+            padding-left: 30px;
+          }
+          &.userIcn {
+            background-image: url(../../../public/assets/icon16.png);
+            @media (max-width: $md) {
+              border-top: 1px solid #d5e0eb;
+              margin-top: 15px;
+              padding-top: 10px;
+              background-position: left 15px;
+            }
+          }
+          &.emailIcn {
+            background-image: url(../../../public/assets/icon17.png);
+          }
+          &.phIcn {
+            background-image: url(../../../public/assets/icon18.png);
+          }
+          &.cldIcn {
+            background-image: url(../../../public/assets/icon19.png);
+          }
+          &.ntlIcn {
+            background-image: url(../../../public/assets/icon20.png);
+          }
+          &.gndrIcn {
+            background-image: url(../../../public/assets/icon21.png);
+          }
+          &.adrsIcn {
+            background-image: url(../../../public/assets/icon22.png);
+          }
+          .formLbl {
+            margin: 0 0 5px;
+            @media (max-width: $md) {
+              font-size: 12px;
+              margin: 0 0 3px;
+            }
+          }
+          .formControl {
+            background-color: #f2f2f2;
+            border-radius: 0;
+            border: 0;
+            font-size: 16px;
+            font-weight: 600;
+            @media (max-width: $md) {
+              height: 40px;
+              line-height: 40px;
+              font-size: 14px;
+            }
+            &[readonly] {
+              background-color: #fff;
+              padding: 0;
+              height: auto;
+              line-height: normal;
+            }
+            &::placeholder {
+              color: #000;
+            }
+          }
+        }
+      }
+      .saveBtnBlock {
+        text-align: right;
+      }
+    }
+    .reviewCard {
+      border: 1px solid #d5e0eb;
+      border-radius: 8px;
+      margin: 0 0 20px;
+      display: flex;
+      overflow: hidden;
+      @media (max-width: $xl) {
+        display: block;
+      }
+      .reviewLeft {
+        display: flex;
+        padding: 15px;
+        flex: 0 0 calc(100% - 270px);
+        width: calc(100% - 270px);
+        @media (max-width: $xl) {
+          flex: 0 0 100%;
+          width: 100%;
+        }
+        @media (max-width: $md) {
+          display: block;
+        }
+        .reviewImg {
+          width: 200px;
+          @media (max-width: $md) {
+            width: 100%;
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+        }
+        .reviewInfo {
+          flex: 0 0 calc(100% - 200px);
+          width: calc(100% - 200px);
+          padding: 0 15px;
+          @media (max-width: $md) {
+            width: 100%;
+            flex: 0 0 100%;
+            padding: 10px 0 0;
+          }
+          h4 {
+            margin: 0 0 10px;
+          }
+          p {
+            margin: 0 0 10px;
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            i {
+              width: 22px;
+            }
+            a {
+              text-decoration: underline;
+              margin-left: 5px;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+          .bkgchk {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #d5e0eb;
+            position: relative;
+            margin-top: 15px;
+            padding-top: 15px;
+            @media (max-width: $md) {
+              font-size: 14px;
+              justify-content: center;
+            }
+            .bkgchkLt,
+            .bkgchkRt {
+              position: relative;
+              span {
+                display: block;
+                color: #837e85;
+                font-size: 12px;
+              }
+            }
+            .bkgchkLt {
+              margin-right: 80px;
+              @media (max-width: $md) {
+                margin-right: 30px;
+              }
+            }
+            @media (max-width: $md) {
+              .bkgchkLt,
+              .bkgchkRt {
+                margin: 0 15px;
+              }
+            }
+          }
+        }
+      }
+      .reviewRight {
+        width: 270px;
+        border-left: 1px solid #d5e0eb;
+        background-color: #f2fafb;
+        padding: 15px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: $xl) {
+          width: 100%;
+          border-left: none;
+          border-top: 1px solid #d5e0eb;
+        }
+        .reviewCount {
+          background-color: $orange;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          border-radius: 50%;
+          color: $white;
+          font-size: 18px;
+          font-weight: 600;
+        }
+        .reviewQuote {
+          position: absolute;
+          left: 15px;
+          top: 10px;
+          padding-left: 35px;
+          background: url(../../../public/assets/quote-icon.png) no-repeat left
+            center;
+          text-align: left;
+          @media (max-width: $xl) {
+            position: relative;
+            left: auto;
+            top: auto;
+            margin-bottom: 10px;
+            text-align: center;
+          }
+        }
+        .reviewPrg {
+          margin: 10px 0;
+          font-weight: 600;
+          strong {
+            display: block;
+          }
+        }
+        .reviewDate {
+          position: absolute;
+          left: 15px;
+          bottom: 10px;
+          font-size: 12px;
+          text-align: left;
+          @media (max-width: $xl) {
+            position: relative;
+            left: auto;
+            top: auto;
+            margin-top: 10px;
+            text-align: center;
+          }
+          span {
+            display: block;
+            color: #837e85;
+          }
+          a {
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    .backBtn {
+      display: flex;
+      align-items: center;
+      img {
+        padding-right: 10px;
+      }
+    }
+    .bookingBnr {
+      border: 1px solid #d5e0eb;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-top: 15px;
+      position: relative;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    .bookingBnrInfo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #023047;
+      padding: 30px 20px 15px;
+      border-radius: 0 0 15px 15px;
+      color: #fff;
+      margin-top: -15px;
+      margin-bottom: 20px;
+      border: 1px solid #fff;
+      @media (max-width: $md) {
+        display: block;
+        padding: 20px 10px 10px;
+      }
+      .bkgBnrLt {
+        display: flex;
+        align-items: center;
+        .bkgBnrInrLt {
+          color: #fff;
+          font-size: 16px;
+          font-weight: 500;
+          span {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+        .bkgBnrInrMid {
+          margin: 0 25px;
+          @media (max-width: $md) {
+            margin: 0 10px;
+          }
+        }
+      }
+      .bkgBnrMid {
+        display: flex;
+        align-items: center;
+        background: #ff850e;
+        padding: 10px 45px;
+        border: 2px solid #fff;
+        border-radius: 50px;
+        margin-top: -72px;
+        position: relative;
+        z-index: 1;
+        @media (max-width: $md) {
+          margin: 10px 0;
+        }
+      }
+      .bkgBnrRt {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 8px;
+        }
+      }
+    }
+    &.flightBgCard {
+      margin: 0 0 20px;
+    }
+    .outBound {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: $md) {
+        display: block;
+      }
+      h4 {
+        margin: 0;
+        @media (max-width: $md) {
+          margin: 0 0 10px;
+        }
+      }
+    }
+    .FlightResultRow {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: $mpl + 10 auto;
+      max-width: 600px;
+      @media (max-width: $md) {
+        display: block;
+        text-align: center;
+      }
+      .FlightName {
+        text-align: center;
+        font-size: $mpl + 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80px;
+        @media (max-width: $md) {
+          margin: 0 auto 10px;
+        }
+        img {
+          max-width: 32px;
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        span {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .FlightTime {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 100px);
+        margin-left: auto;
+        @media (max-width: $md) {
+          display: block;
+          width: 100%;
+        }
+        .Timming {
+          font-size: $mpl + 2;
+          font-weight: 400;
+
+          b {
+            display: block;
+            font-size: $mpl + 8;
+          }
+        }
+
+        .FlightType {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 $mpl + 20;
+          width: calc(100% - 242px);
+          text-align: center;
+          font-size: $mpl + 2;
+          @media (max-width: $md) {
+            width: 100%;
+            margin: 10px auto;
+          }
+          span {
+            width: 100%;
+            border-bottom: solid 1px lighten($gray, 30%);
+            margin-bottom: $mpl;
+            padding-bottom: $mpl;
+
+            &:last-child {
+              border: 0;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+    .FlightRtlTop {
+      margin: 0 auto 15px;
+      background-color: #e7f6f8;
+      border-radius: 40px;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      padding: 10px;
+    }
+    .FlightRtlBtm {
+      margin: 0;
+      text-align: center;
+      a {
+        text-decoration: underline;
+        @media (max-width: $md) {
+          display: block;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .helpBnr {
+      background-color: $blue;
+      border-radius: 10px;
+      padding: 25px 15px 25px 110px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      position: relative;
+      margin-bottom: 20px;
+      @media (max-width: $md) {
+        padding: 10px;
+        display: block;
+      }
+      &::before {
+        position: absolute;
+        width: 84px;
+        height: 107px;
+        background: url(../../../public/assets/need-help-icon.png) no-repeat
+          center center;
+        bottom: 0;
+        left: 12px;
+        display: block;
+        content: "";
+        @media (max-width: $md) {
+          display: none;
+        }
+      }
+      p {
+        color: #fff;
+      }
+      a {
+        min-width: 200px;
+        @media (max-width: $md) {
+          margin-top: 10px;
+        }
+      }
+    }
+    .bgAllowanceCard {
+      margin: 0 0 20px;
+    }
+    .adultsTicket {
+      border: 1px solid #d5e0eb;
+      margin-bottom: 10px;
+      .adultsHd {
+        background-color: #e8f7f8;
+        border-bottom: 1px solid #d5e0eb;
+        padding: 10px;
+        font-weight: 600;
+      }
+      .adultsDtl {
+        display: flex;
+        align-items: center;
+        .adultsDtlInfo {
+          border-right: 1px solid #d5e0eb;
+          padding: 8px 10px;
+          img {
+            margin-right: 10px;
+          }
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+    .lineBtn {
+      border: 1px solid #21afbc;
+      border-radius: 40px;
+      padding: 8px 20px;
+      color: #21afbc;
+      display: inline-block;
+      &:hover {
+        background-color: #21afbc;
+        color: #fff;
+      }
+    }
+    .ticketPoliciesCard {
+      margin-bottom: 20px;
+      .ticketPoliciesTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        @media (max-width: $md) {
+          display: block;
+        }
+        h4 {
+          margin: 0;
+        }
+        .lineBtn {
+          margin-left: 10px;
+          @media (max-width: $md) {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin: 10px 0 0;
+          }
+          &:hover {
+            img {
+              filter: invert(1) saturate(0) brightness(100);
+            }
+          }
+        }
+      }
+    }
+    .bgAllowance {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      .bgAllowImg {
+        width: 26px;
+        margin-right: 15px;
+      }
+      .bgAllowTxt {
+        font-weight: 600;
+        font-size: 16px;
+        @media (max-width: $md) {
+          font-size: 14px;
+        }
+        span {
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+      .bgAllowArw {
+        margin: 0 15px;
+        @media (max-width: $md) {
+          margin: 0 5px;
+        }
+        img {
+          filter: invert(1) brightness(0);
+        }
+      }
+    }
+    .acrdOuter {
+      margin: 0;
+      border: none;
+      .acrdItem {
+        margin: 0 0 20px;
+        border: 1px solid #d5e0eb;
+        padding: 0;
+        border-radius: 0;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      .acrdHdr {
+        margin: 0;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        button {
+          margin: 0;
+          border: none;
+          padding: 8px 10px;
+          border-radius: 0;
+          background-color: #e8f7f8;
+          font-size: 14px;
+          font-weight: 600;
+          outline: none;
+          box-shadow: none;
+          &[aria-expanded="true"] {
+            background-color: #21afbc;
+            color: #fff;
+            &::after {
+              filter: invert(1) saturate(0) brightness(100);
+            }
+          }
+        }
+      }
+      .acrdBody {
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        @media (max-width: $md) {
+          padding: 10px;
+        }
+        &.acrdChngPolicy {
+          padding: 0;
+          .adultsDtl {
+            display: flex;
+            align-items: center;
+            .adultsDtlInfo {
+              border-right: 1px solid #d5e0eb;
+              padding: 8px 10px;
+              img {
+                margin-right: 10px;
+              }
+              &:last-child {
+                border-right: none;
+              }
+            }
+          }
+        }
+        ul {
+          margin: 0 0 15px;
+          li {
+            margin: 0 0 2px 30px;
+            line-height: 1.5;
+            list-style: disc;
+          }
+        }
+        ol {
+          margin: 0 0 15px;
+          li {
+            margin: 0 0 2px 30px;
+            line-height: 1.5;
+            list-style: decimal;
+          }
+        }
+      }
+    }
+    .passengerCard {
+      margin-bottom: 20px;
+      h4 {
+        margin: 0 0 10px;
+      }
+    }
+    .paymentCard {
+      .paymentHd {
+        margin: 0 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: $md) {
+          display: block;
+        }
+        h4 {
+          margin: 0;
+          @media (max-width: $md) {
+            margin: 0 0 10px;
+          }
+        }
+        .lineBtn {
+          img {
+            padding-right: 5px;
+          }
+          &:hover {
+            img {
+              filter: invert(1) saturate(0) brightness(100);
+            }
+          }
+        }
+      }
+      .paymentInfo {
+        display: flex;
+        align-items: center;
+        @media (max-width: $md) {
+          display: block;
+        }
+        .paymentInfoLt {
+          text-align: center;
+          width: 230px;
+          min-width: 230px;
+          padding-right: 50px;
+          @media (max-width: $md) {
+            display: none;
+          }
+          span {
+            display: block;
+            margin-top: 10px;
+          }
+        }
+        .paymentInfoRt {
+          flex: auto;
+          tr {
+            td {
+              padding: 10px 0;
+            }
+            &.tblBdrNone {
+              td {
+                border-bottom: none;
+                padding-bottom: 0;
+              }
+            }
+          }
+          .tbl1 td,
+          .tbl3 td {
+            color: #2ad352;
+          }
+          .tbl2 td {
+            border: none;
+            padding: 5px 0;
+          }
+          .tbl3 td {
+            border-top: 1px solid #dee2e6;
+            border-bottom: 1px solid #dee2e6;
+          }
+          .tbl4 td {
+            font-size: 16px;
+            border-bottom: none;
+          }
+        }
+      }
+      .paymentDate {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #d5e0eb;
+        padding-top: 15px;
+        @media (max-width: $md) {
+          font-size: 12px;
+        }
+      }
+      .paymentParag {
+        border-top: 1px solid #d5e0eb;
+        padding-top: 15px;
+      }
+    }
+    .bkgStatus {
+      font-size: 12px;
+      padding: 3px 12px;
+      border-radius: 4px;
+      &.statusCompleted {
+        background-color: #d6f1db;
+        color: #000;
+      }
+      &.statusUpcoming {
+        background-color: #ffe9d4;
+        color: #000;
+      }
+      &.statusCancelled {
+        background-color: #fbb8be;
+        color: #000;
+      }
+    }
+    .hotelBkgOuter {
+      margin: 20px 0;
+      .hotelBkgTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .bookingId {
+          font-weight: 600;
+        }
+      }
+      .hotelBkgBtm {
+        text-align: center;
+        border-top: 1px solid #d5e0eb;
+        margin-top: 10px;
+        padding-top: 10px;
+        a {
+          margin: 0 5px;
+          @media (max-width: $md) {
+            margin: 5px;
+          }
+        }
+      }
+    }
+    .hotelBkgBnr {
+      padding: 0;
+      margin: 0 0 20px;
+      .hotelMainBnr {
+        border-radius: 14px 14px 0 0;
+        overflow: hidden;
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+      .hotelBnrInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        @media (max-width: $md) {
+          display: block;
+          padding: 10px 15px;
+        }
+        .hotelBnrInfoHd {
+          @media (max-width: $md) {
+            margin: 0 0 10px;
+          }
+          h3 {
+            margin: 0 0 7px;
+          }
+          .hotelBnrInfoTrip {
+            display: flex;
+            align-items: center;
+            @media (max-width: $md) {
+              display: block;
+            }
+            img {
+              margin-right: 5px;
+            }
+          }
+        }
+        .lineBtn {
+          img {
+            padding-right: 5px;
+          }
+          &:hover {
+            img {
+              filter: invert(1) saturate(0) brightness(100);
+            }
+          }
+        }
+      }
+      .hotelBnrInfoBtm {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #d5e0eb;
+        padding: 15px 20px;
+        @media (max-width: $md) {
+          display: block;
+          text-align: center;
+          padding: 10px 15px;
+        }
+        .hotelBnrInfoLt {
+          font-size: 12px;
+          color: #837e85;
+          span {
+            display: block;
+            color: #000;
+            font-size: 14px;
+          }
+        }
+        .hotelBnrInfoMid {
+          flex: auto;
+          text-align: center;
+          position: relative;
+          @media (max-width: $md) {
+            margin: 10px 0;
+          }
+          &::before {
+            background-color: #e7f6f8;
+            height: 1px;
+            left: 20px;
+            top: 15px;
+            display: block;
+            content: "";
+            position: absolute;
+            right: 20px;
+          }
+          span {
+            background-color: #e7f6f8;
+            padding: 5px 20px;
+            border-radius: 4px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+          }
+        }
+      }
+    }
+    .roomInfoOuter {
+      margin-bottom: 20px;
+      h4 {
+        margin: 0 0 15px;
+      }
+      .roomInfoInner {
+        display: flex;
+        align-items: center;
+        .roomInfoInnerLt {
+          width: 96px;
+          min-width: 96px;
+          @media (max-width: $md) {
+            width: 80px;
+            min-width: 80px;
+          }
+          img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+          }
+        }
+        .roomInfoInnerRt {
+          flex: auto;
+          padding-left: 20px;
+          @media (max-width: $md) {
+            padding-left: 10px;
+          }
+          p {
+            margin: 0;
+            small {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .roomParaOuter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #d5e0eb;
+        margin-top: 20px;
+        padding-top: 15px;
+        font-size: 12px;
+        @media (max-width: $md) {
+          display: block;
+        }
+        .roomParaInrLt {
+          width: 50%;
+          @media (max-width: $md) {
+            width: 100%;
+          }
+        }
+        .roomParaInrRt {
+          width: 50%;
+          @media (max-width: $md) {
+            width: 100%;
+            margin-top: 10px;
+          }
+        }
+        h6 {
+          font-size: 14px;
+          margin: 0 0 3px;
+        }
+      }
+    }
+    .guestInfoOuter {
+      margin-bottom: 20px;
+      h4 {
+        margin: 0 0 15px;
+      }
+      .guestParaOuter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+        h6 {
+          font-size: 14px;
+          margin: 0 0 3px;
+        }
+        .guestParaInrLt {
+          width: 50%;
+        }
+        .guestParaInrRt {
+          width: 50%;
+        }
+      }
+    }
+    .cancelPlcy {
+      margin-bottom: 20px;
+      h4 {
+        margin: 0 0 10px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+    &.helpSupportCard {
+      .frmGroup{
+        margin-bottom: 20px;
+      }
+      .helpBtmBox {
+        margin-top: 30px;
+        border-top: 1px solid #d5e0eb;
+        padding-top: 30px;
+        .helpLink {
+          border: 1px solid #d5e0eb;
+          padding: 10px 20px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          font-size: 13px;
+          color: #000;
+          font-weight: 600;
+          margin-bottom: 20px;
+          background-color: $white;
+          width: 100%;
+          height: calc(100% - 20px);
+          i {
+            padding-right: 10px;
+            width: 42px;
+            min-width: 42px;
+          }
+          div {
+            span {
+              display: block;
+              color: $orange;
+              text-decoration: underline;
+            }
+          }
+          &:hover {
+            background-color: #f1f6fa;
+          }
+        }
+        .connectLink {
+          text-align: left;
+          display: flex;
+          align-items: center;
+          padding: 15px 20px;
+          font-size: 16px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          @media (max-width: $md) {
+            padding: 10px 20px;
+            font-size: 14px;
+          }
+          img {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .pflTabNav {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #e3e8eb;
+    display: flex;
+    align-items: center;
+    .pflTabNavList {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+      width: 33.333%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        border: 0;
+        margin: 0;
+        padding: 10px 10px 15px;
+        border-radius: 0;
+        font-weight: 600;
+        display: block;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: #8d8888;
+        &::before {
+          transition: all 0.3s ease;
+          display: block;
+          width: 0;
+          height: 2px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          content: "";
+          background-color: $orange;
+          opacity: 0;
+        }
+        i {
+          margin-bottom: 5px;
+          display: block;
+          text-align: center;
+          img {
+            filter: grayscale(100%);
+          }
+        }
+        span {
+          display: block;
+        }
+        &[aria-selected="true"] {
+          color: $orange;
+          i {
+            img {
+              filter: grayscale(0);
+            }
+          }
+          &::before {
+            opacity: 1;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .bookingTabPane {
+    padding: 20px 0 0;
+    .bookingFilter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      @media (max-width: $md) {
+        width: 100%;
+        display: block;
+      }
+      .bookingFilterLt {
+        .leftFilter {
+          @media (max-width: $md) {
+            width: 100%;
+            > div > div {
+              display: block;
+            }
+          }
+          .filterIcon {
+            background: #fff url(../../../public/assets/filter-icon.png)
+              no-repeat 15px center;
+            padding-left: 50px;
+            width: 200px;
+            cursor: pointer;
+            @media (max-width: $md) {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .bookingFilterRt {
+        @media (max-width: $md) {
+          width: 100%;
+          margin-top: 15px;
+        }
+        .srchInput {
+          background: #fff url(../../../public/assets/srch-icon.png) no-repeat
+            15px center;
+          padding-left: 50px;
+          width: 250px;
+          @media (max-width: $md) {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .bkgHd {
+      padding: 20px 0;
+      h2 {
+        margin: 0;
+      }
+    }
+    .bkgCard {
+      border: 1px solid #d5e0eb;
+      border-radius: 8px;
+      margin: 0 0 20px;
+      .bkgCardTop {
+        border-bottom: 1px solid #d5e0eb;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        @media (max-width: $md) {
+          padding: 10px;
+        }
+      }
+      .bkgCardMid {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        @media (max-width: $md) {
+          display: block;
+          padding: 10px;
+        }
+        .bkgCardMidLt {
+          width: 124px;
+          margin-right: 20px;
+          min-width: 124px;
+          @media (max-width: $md) {
+            margin: 0 auto;
+          }
+          img {
+            border-radius: 5px;
+          }
+        }
+        .bkgCardMidRt {
+          flex: auto;
+          display: flex;
+          align-items: center;
+          @media (max-width: $md) {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+          }
+          .bkgFlightLt,
+          .bkgFlightRt {
+            font-size: 12px;
+            font-weight: 400;
+            min-width: 130px;
+            width: 130px;
+            @media (max-width: $md) {
+              width: auto;
+              min-width: inherit;
+            }
+            strong {
+              display: block;
+              font-size: 18px;
+            }
+          }
+          .bkgFlightMid {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 30px;
+            flex: auto;
+            text-align: center;
+            font-size: 12px;
+            @media (max-width: $md) {
+              margin: 10px 0;
+            }
+            span {
+              width: 100%;
+              border-bottom: solid 1px #cfcdcf;
+              margin-bottom: 10px;
+              padding-bottom: 10px;
+              &:last-child {
+                border: 0;
+                margin: 0;
+                padding: 0;
+              }
+            }
+          }
+          .bkgHotelInfo {
+            h4 {
+              margin: 0;
+              font-size: 16px;
+            }
+            .bkgchk {
+              font-size: 16px;
+              display: flex;
+              align-items: center;
+              @media (max-width: $md) {
+                font-size: 14px;
+                justify-content: center;
+              }
+              span {
+                display: block;
+                color: #837e85;
+                font-size: 12px;
+              }
+              .bkgchkLt {
+                margin-right: 30px;
+              }
+              @media (max-width: $md) {
+                .bkgchkLt,
+                .bkgchkRt {
+                  margin: 0 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .bkgCardBtm {
+        border-top: 1px solid #d5e0eb;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        @media (max-width: $md) {
+          padding: 10px;
+          flex-direction: column;
+        }
+        .bkgCardBtmLtBtn {
+          text-decoration: underline;
+          img {
+            padding-right: 8px;
+          }
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        .bkgCardBtmRtBtn {
+          font-size: 12px;
+          padding: 6px 20px;
+          border-radius: 4px;
+          color: $white;
+          background-color: $orange;
+          @media (max-width: $md) {
+            margin-top: 10px;
+          }
+          &:hover {
+            background-color: $blue;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rdoGrp {
+  .reviewRdo {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    .reviewRdoField {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      input {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+        cursor: pointer;
+        + label {
+          margin: 0 3px;
+          width: 92px;
+          height: 36px;
+          color: #ff0000;
+          border: 1px solid #ff0000;
+          border-radius: 36px;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 34px;
+          padding-left: 48px;
+          text-align: left;
+          background-color: #fff;
+          background-repeat: no-repeat;
+          background-position: 15px center;
+          background-image: url(../../../public/assets/dislike.png);
+          cursor: pointer;
+        }
+        &:checked {
+          + label {
+            background-image: url(../../../public/assets/dislike-fill.png);
+          }
+        }
+      }
+      &.rdoSecond {
+        input {
+          + label {
+            border-color: #00aa6c;
+            color: #00aa6c;
+            background-image: url(../../../public/assets/like.png);
+          }
+          &:checked {
+            + label {
+              background-image: url(../../../public/assets/like-fill.png);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.reviewSidePopup {
+  background-color: $white;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999999;
+  width: 500px;
+  padding: 0 20px 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
+  transform: translateX(120%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  @media (max-width: $md) {
+    width: 100%;
+  }
+  &.sidePopupOpen {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .reviewHd {
+    background-color: #e4f5f7;
+    font-size: 16px;
+    padding: 12px 20px;
+    font-weight: 600;
+    margin: 0 -20px;
+  }
+  .reviewPopupClsBtn {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    img {
+      filter: grayscale(100%);
+    }
+  }
+  .reviewMainHd {
+    text-align: center;
+    padding: 15px 0;
+    img {
+      margin-bottom: 5px;
+    }
+  }
+  .rvProgress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-top: 1px solid #d5e0eb;
+    border-bottom: 1px solid #d5e0eb;
+    @media (max-width: $md) {
+      flex-direction: column;
+      text-align: center;
+    }
+    .rvProgressLt {
+      color: #656565;
+      font-size: 12px;
+      @media (max-width: $md) {
+        margin-bottom: 10px;
+      }
+      h6 {
+        margin: 0 0 5px;
+        font-size: 16px;
+      }
+    }
+    .rvProgressRt {
+      margin: 0;
+    }
+  }
+  .rvwLoop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #d5e0eb;
+    .rvwLoopLt {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      img {
+        margin-right: 10px;
+        opacity: 0.5;
+      }
+    }
+    .rvwLoopRt {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .reviewForm {
+    margin: 20px 0 0;
+  }
+}

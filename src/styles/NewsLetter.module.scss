@@ -5,7 +5,7 @@
     center;
   background-size: cover;
   padding: $mpl + 60 0;
-  @media (max-width: $lg) {
+  @media (max-width: $lg) { 
     padding: $mpl + 30 0;
   }
   .NewsLetterLeft {
@@ -72,6 +72,8 @@
       font-weight: 400;
       display: inline-block;
       cursor: pointer;
+      overflow: hidden;
+      z-index: 3;
       @media (max-width: $lg) {
         height: 40px;
         line-height: 40px;

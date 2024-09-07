@@ -1,17 +1,18 @@
 @import "../variables.scss";
+
 .FlightBookingRight {
   .FlightTravelerHdOut {
-    margin-bottom: 15px;
+    margin-bottom: $mpl + 5;
     a {
       color: $green;
       text-decoration: underline;
     }
   }
   .FlightTravelerHd {
-    font-size: 18px;
+    font-size: $mpl + 8;
     font-weight: $font-bold;
-    @media (max-width: $md) { 
-      font-size: 16px;
+    @media (max-width: $md) {
+      font-size: $mpl + 6;
     }
   }
   .CardInfoGray {
@@ -19,12 +20,12 @@
     border: 0;
   }
   .CardInfo {
-    padding: 30px;
+    padding: $mpl + 20;
     border-radius: 8px;
     border: 1px solid $graylightbdr;
-    margin-bottom: 30px;
+    margin-bottom: $mpl + 20;
     @media (max-width: $xl) {
-      padding: 15px;
+      padding: $mpl + 5;
     }
     .FlightTravelerTxtLink {
       &:hover {
@@ -33,7 +34,7 @@
     }
     .PriceBreakDownRow {
       justify-content: space-between;
-      margin-bottom: 12px;
+      margin-bottom: $mpl + 2;
       gap: 0 10px;
     }
     .PriceTotalBox {
@@ -42,30 +43,30 @@
       border-top: 1px solid $graylightbdr;
       margin-left: -30px;
       margin-right: -30px;
-      margin-top: 10px;
-      padding: 20px 30px 0;
+      margin-top: $mpl;
+      padding: $mpl + 10 $mpl + 20 0;
       @media (max-width: $xl) {
         margin-left: -15px;
         margin-right: -15px;
-        padding: 15px 15px 0;
+        padding: $mpl + 5 $mpl + 5 0;
       }
       .PriceTotalHd {
-        font-size: 24px;
+        font-size: $mpl + 14;
         @media (max-width: $md) {
-          font-size: 20px;
+          font-size: $mpl + 10;
         }
       }
       .PriceTotalSubTxt {
-        font-size: 12px;
+        font-size: $mpl + 2;
       }
       .PriceTotalRight {
-        font-size: 24px;
+        font-size: $mpl + 14;
         color: $green;
         @media (max-width: $xl) {
-          font-size: 22px;
+          font-size: $mpl + 12;
         }
         @media (max-width: $md) {
-          font-size: 18px;
+          font-size: $mpl + 8;
         }
       }
     }
@@ -87,17 +88,17 @@
         border: 0;
         width: 106px;
         border-radius: 0;
-        font-size: 14px;
-        &:hover{
+        font-size: $mpl + 4;
+        &:hover {
           background: $blue;
         }
       }
     }
     .CouponRow {
-      margin-top: 20px;
+      margin-top: $mpl + 10;
       .CouponCol:not(:last-child) {
-        margin-bottom: 20px;
-        padding-bottom: 20px;
+        margin-bottom: $mpl + 10;
+        padding-bottom: $mpl + 10;
         border-bottom: 1px solid $graylightbdr;
       }
     }
@@ -110,13 +111,13 @@
       }
       .CouponCode {
         border: 2px dashed #ffc68f;
-        padding: 4px 15px;
+        padding: 4px $mpl + 5;
         letter-spacing: 2px;
-        font-size: 14px;
-        margin-bottom: 10px;
+        font-size: $mpl + 4;
+        margin-bottom: $mpl;
         display: inline-block;
         @media (max-width: $md) {
-          font-size: 13px;
+          font-size: $mpl + 3;
           letter-spacing: 1px;
         }
       }
@@ -130,7 +131,7 @@
         opacity: 0;
       }
       input + label {
-        font-size: 12px;
+        font-size: $mpl + 2;
         color: $black;
         position: relative;
         padding-left: $mpl + 30;
@@ -178,7 +179,7 @@
         display: flex;
         justify-content: space-between;
         margin: 0;
-        padding: 0 0 0 32px;
+        padding: 0 0 0 $mpl + 22;
         p {
           margin: 0;
         }

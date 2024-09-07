@@ -130,7 +130,7 @@ function SignUpPage() {
             </Form.Group>
 
             <Form.Group className={styles.FormGroup}>
-              {["checkbox"].map((type) => (
+              {["checkbox"].map((type:any) => (
                 <div key={`default-${type}`}>
                   <Form.Check
                     type={type}

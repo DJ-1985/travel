@@ -2,16 +2,22 @@ import React, { useCallback, useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import styles from "@/styles/SideBar/MultiRangeSlider.module.scss";
 
-const MultiRangeSlider = ({ min, max, onChange }) => {
-  const [minVal, setMinVal] = useState(min);
-  const [maxVal, setMaxVal] = useState(max);
-  const minValRef = useRef(min);
-  const maxValRef = useRef(max);
-  const range = useRef(null);
+interface MultiRangeSliderProps {
+  min: number;
+  max: number;
+  onChange: (values: { min: number; max: number }) => void;
+}
+
+const MultiRangeSlider: React.FC<MultiRangeSliderProps> = ({ min, max, onChange }) => {
+  const [minVal, setMinVal] = useState<number>(min);
+  const [maxVal, setMaxVal] = useState<number>(max);
+  const minValRef = useRef<number>(min);
+  const maxValRef = useRef<number>(max);
+  const range = useRef<HTMLDivElement | null>(null);
 
   // Convert to percentage
   const getPercent = useCallback(
-    (value) => Math.round(((value - min) / (max - min)) * 100),
+    (value: number) => Math.round(((value - min) / (max - min)) * 100),
     [min, max]
   );
 
@@ -54,7 +60,7 @@ const MultiRangeSlider = ({ min, max, onChange }) => {
           minValRef.current = value;
         }}
         className={`${styles.thumb} ${styles.thumbLeft}`}
-        style={{ zIndex: minVal > max - 100 && "5" }}
+        style={{ zIndex: minVal > max - 100 ? 5 : undefined }}
       />
       <input
         type="range"

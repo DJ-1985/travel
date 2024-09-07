@@ -1,12 +1,13 @@
 @import "../variables.scss";
+
 .FlightBookingLeft {
   .FlightTravelerTxtLink {
     color: $green;
     position: relative;
-    padding-left: 10px;
-    margin-left: 10px;
+    padding-left: $mpl;
+    margin-left: $mpl;
     text-decoration: underline;
-    font-size: 12px;
+    font-size: $mpl + 2;
     border-left: 1px solid $black;
     &:hover {
       color: $black;
@@ -19,26 +20,26 @@
     }
   }
   p {
-    font-size: 12px;
+    font-size: $mpl + 2;
   }
   .FlightTravelerHd {
-    font-size: 18px;
+    font-size: $mpl + 8;
     font-weight: $font-bold;
-    margin-bottom: 10px;
+    margin-bottom: $mpl;
     @media (max-width: $md) {
-      font-size: 16px;
+      font-size: $mpl + 6;
     }
   }
   .FlightTravelerTrip {
-    margin-bottom: 40px;
+    margin-bottom: $mpl + 30;
     .FlightTravelerTxt {
-      font-size: 14px;
+      font-size: $mpl + 4;
     }
   }
   .ContentBox {
-    margin-bottom: 40px;
+    margin-bottom: $mpl + 30;
     .FormLabel {
-      margin-bottom: 10px;
+      margin-bottom: $mpl;
       @media (max-width: $md) {
         margin-bottom: 5px;
       }
@@ -56,7 +57,7 @@
       }
     }
     .FlyerHeadingBox {
-      margin-bottom: 20px;
+      margin-bottom: $mpl + 10;
     }
     .CustomCHK {
       width: 100%;
@@ -75,7 +76,7 @@
         opacity: 0;
       }
       input + label {
-        font-size: 14px;
+        font-size: $mpl + 4;
         color: $black;
         position: relative;
         line-height: 22px;
@@ -126,7 +127,7 @@
         display: flex;
         justify-content: space-between;
         margin: 0;
-        padding: 0 0 0 32px;
+        padding: 0 0 0 $mpl + 22;
         p {
           margin: 0;
         }
@@ -137,47 +138,47 @@
       }
     }
     .WeightBox {
-      margin-bottom: 40px;
+      margin-bottom: $mpl + 30;
       .CustomCHKColorText {
-        margin-left: 10px;
+        margin-left: $mpl;
         color: $orange;
         font-weight: $font-bold;
         @media (max-width: $sm) {
           width: 100%;
           margin-left: 0;
-          margin-top: 10px;
+          margin-top: $mpl;
         }
       }
     }
     .PaymentLogo {
       border-radius: 5px;
-      padding: 10px;
+      padding: $mpl;
       border: 1px solid $graylightbdr;
       display: inline-block;
-      margin-bottom: 20px;
+      margin-bottom: $mpl + 10;
     }
     .CardInfo {
       border: 1px solid $graylightbdr;
-      padding: 30px;
-      margin-bottom: 20px;
+      padding: $mpl + 20;
+      margin-bottom: $mpl + 10;
       border-radius: 8px;
       @media (max-width: $xl) {
-        padding: 15px;
+        padding: $mpl + 5;
       }
       .FlyerNameInfo {
         font-weight: $font-bold;
-        margin-bottom: 25px;
+        margin-bottom: $mpl + 15;
       }
       button {
         background-color: $greyf2;
         border: 0;
-        margin-right: 20px;
+        margin-right: $mpl + 10;
         width: 135px;
         border-radius: 0;
-        font-size: 16px;
+        font-size: $mpl + 6;
         color: $black;
         position: relative;
-        padding-right: 40px;
+        padding-right: $mpl + 30;
         &:focus {
           color: $black;
         }
@@ -207,16 +208,16 @@
   }
   .ButtonBottomBox {
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: $mpl + 30;
     gap: 0 30px;
     .ButtonBottomBack {
       color: $green;
       text-decoration: none;
-    } 
+    }
     .SiteBtn {
       background-color: $orange;
-      font-size: 14px;
-      padding: 7px 15px;
+      font-size: $mpl + 4;
+      padding: 7px $mpl + 5;
       border-radius: 5px;
       border: 0;
       color: #fff;

@@ -123,6 +123,7 @@ p:last-child {
   border: 1px solid #dfdfdf;
   outline: none;
   padding: 0px $mpl + 6;
+  font-family: "Poppins", sans-serif;
 }
 .form-control:focus {
   color: $black;
@@ -134,11 +135,18 @@ p:last-child {
 }
 select.form-control {
   appearance: none;
-  padding: 0 $mpl + 6;
-  height: 45px !important;
-  line-height: 45px;
+  padding-right: 40px;
+  height: 50px !important;
+  line-height: 50px;
   background: $white url(../../public/assets/arrow2.png) no-repeat center right
     16px;
+}
+textarea.form-control {
+  min-height: 100px;
+  height: auto;
+  resize: none;
+  line-height: normal;
+  padding: 16px;
 }
 .text-right {
   text-align: right;
@@ -341,3 +349,322 @@ button.dropdown-toggle.show.btn.btn-outline-secondary {
   border-color: #dfdfdf;
   border-radius: 10px 0 0 10px;
 }
+
+.btn-custom {
+  min-width: 180px;
+  text-align: center;
+  padding: 0px 20px;
+  background-color: #023047;
+  border: solid 1px #023047;
+  border-radius: 60px;
+  height: 60px;
+  line-height: 56px;
+  color: #fff;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  cursor: pointer;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #219ebc !important;
+    border-color: #219ebc !important;
+    color: #fff;
+  }
+  &.btn-small {
+    font-size: 14px;
+    height: 44px;
+    line-height: 44px;
+    min-width: inherit;
+    padding: 0 30px;
+  }
+}
+
+.btn-yellow {
+  background: #ff850e;
+  font-size: 14px;
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #023047 !important;
+    border-color: #023047 !important;
+    color: #fff !important;
+  }
+  &.round-btn {
+    border-radius: 50px;
+  }
+}
+
+.btn-green {
+  background: #21afbc;
+  font-size: 14px;
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #023047 !important;
+    border-color: #023047 !important;
+    color: #fff !important;
+  }
+  &.round-btn {
+    border-radius: 50px;
+  }
+}
+
+.btn-ldr {
+  display: none;
+}
+
+.btn-overlay {
+  pointer-events: none !important;
+  position: relative;
+  overflow: hidden;
+  .btn-ldr {
+    display: block;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: "";
+    img {
+      width: 34px;
+      top: 50%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transform: translateY(-50%);
+      display: block !important;
+      @media (max-width: $xl) {
+        width: 22px;
+      }
+    }
+  }
+}
+
+.react-datepicker-popper {
+  margin-top: 5px !important;
+}
+.react-datepicker-wrapper {
+  display: block !important;
+}
+.react-datepicker {
+  font-family: $font-family !important;
+  font-size: 14px !important;
+  border: 1px solid #ebe6de !important;
+  border-radius: 0 !important;
+}
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+.react-datepicker__header {
+  background-color: #e9f6f9 !important;
+  border-bottom: none !important;
+  padding: 15px 8px 0 !important;
+}
+.react-datepicker-popper .react-datepicker__triangle {
+  stroke: #ebe6de !important;
+}
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {
+  fill: #e9f6f9 !important;
+  color: #e9f6f9 !important;
+}
+.react-datepicker__month {
+  margin: 15px !important;
+}
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+  width: 2.7rem !important;
+  line-height: 2.7rem !important;
+  margin: 0 !important;
+}
+.react-datepicker__navigation {
+  top: 10px !important;
+  border: 1px solid #219ebc !important;
+  border-radius: 50% !important;
+}
+.react-datepicker__navigation--previous {
+  left: 10px !important;
+}
+.react-datepicker__navigation--next {
+  right: 10px !important;
+}
+.react-datepicker__year-read-view--down-arrow,
+.react-datepicker__month-read-view--down-arrow,
+.react-datepicker__month-year-read-view--down-arrow,
+.react-datepicker__navigation-icon::before {
+  border-color: #219ebc !important;
+  border-width: 2px 2px 0 0 !important;
+  top: 11px !important;
+}
+.react-datepicker__navigation-icon--previous {
+  right: 0 !important;
+}
+.react-datepicker__navigation-icon--next {
+  left: 0 !important;
+}
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+  border-radius: 0 !important;
+  background-color: #219ebc !important;
+  color: #fff !important;
+}
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range {
+  background-color: #023548 !important;
+  color: #fff !important;
+  border-radius: 0 !important;
+}
+.react-datepicker__day:hover,
+.react-datepicker__month-text:hover,
+.react-datepicker__quarter-text:hover,
+.react-datepicker__year-text:hover {
+  border-radius: 0 !important;
+}
+@media (max-width: $xl) {
+  .react-datepicker-popper {
+    margin-top: 0px !important;
+  }
+  .react-datepicker {
+    font-size: 12px !important;
+  }
+  .react-datepicker__day-name,
+  .react-datepicker__day,
+  .react-datepicker__time-name {
+    width: 2rem !important;
+    line-height: 2rem !important;
+  }
+  .react-datepicker__current-month,
+  .react-datepicker-time__header,
+  .react-datepicker-year-header {
+    font-size: 14px !important;
+  }
+  .react-datepicker__navigation {
+    height: 28px !important;
+    width: 28px !important;
+  }
+  .react-datepicker__month {
+    margin: 5px !important;
+  }
+  .react-datepicker__header {
+    padding: 10px 8px 0 !important;
+  }
+  .react-datepicker__navigation {
+    top: 4px !important;
+  }
+}
+@media (max-width: $md) {
+  .react-datepicker__month-container {
+    width: 100% !important;
+  }
+}
+
+.carrecentsearch_recentSlider__WstvS,
+.CarDetail_extraOptionSlider__q7Mfb {
+  .slick-list {
+    margin: 0 -7px;
+    .slick-slide {
+      padding: 0 7px;
+    }
+  }
+}
+
+.carrecentsearch_recentSlider__WstvS .slick-slider .slick-arrow {
+  width: 30px;
+  height: 30px;
+  background-color: #023047;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  box-shadow: 3px 0 30px 0 rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 3;
+}
+.carrecentsearch_recentSlider__WstvS .slick-slider .slick-arrow.slick-prev {
+  background-image: url(../../public/assets/prev-arw.png);
+  left: -15px;
+  @media only screen and (max-width: 1320px) {
+    left: 15px;
+  }
+}
+.carrecentsearch_recentSlider__WstvS .slick-slider .slick-arrow.slick-next {
+  background-image: url(../../public/assets/next-arw.png);
+  right: -15px;
+  @media only screen and (max-width: 1320px) {
+    right: 15px;
+  }
+}
+.carrecentsearch_recentSlider__WstvS .slick-prev:before,
+.carrecentsearch_recentSlider__WstvS .slick-next:before {
+  display: none;
+}
+
+.CarDetail_extraOptionSlider__q7Mfb .slick-slider .slick-arrow {
+  width: 30px;
+  height: 30px;
+  background-color: #023047;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  box-shadow: 3px 0 30px 0 rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 3;
+  transform: inherit;
+  top: -34px;
+}
+.CarDetail_extraOptionSlider__q7Mfb .slick-slider .slick-arrow.slick-prev {
+  background-image: url(../../public/assets/prev-arw.png);
+  right: 36px;
+  left: auto;
+}
+.CarDetail_extraOptionSlider__q7Mfb .slick-slider .slick-arrow.slick-next {
+  background-image: url(../../public/assets/next-arw.png);
+  right: 0;
+}
+.CarDetail_extraOptionSlider__q7Mfb .slick-prev:before,
+.CarDetail_extraOptionSlider__q7Mfb .slick-next:before {
+  display: none;
+}
+
+

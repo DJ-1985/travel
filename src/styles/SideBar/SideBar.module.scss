@@ -10,6 +10,7 @@
     border: solid 1px $graylightbdr;
     border-radius: 10px;
     padding: 26px;
+    background-color: $white;
     @media only screen and (max-width: $xl) {
       padding: 20px 15px;
     }
@@ -41,7 +42,7 @@
       }
     }
     .SideCheckList {
-      margin: 0; 
+      margin: 0;
       .CustomCHK {
         width: 100%;
         margin: 0 0 $mpl 0;
@@ -187,7 +188,7 @@
                   hue-rotate(137deg) brightness(89%) contrast(74%);
               }
             }
-            &.Active{
+            &.Active {
               background-color: lighten($green, 50%);
               border-color: lighten($green, 10%);
               color: $green;
@@ -220,6 +221,7 @@
     margin: 0;
     border-radius: 0;
     border: 0;
+    background: transparent;
     p {
       display: block;
       width: 100%;

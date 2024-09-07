@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "@/styles/FlightResult/DaySlider.module.scss";
 
-function DaySlide() {
+function DaySlide() { 
   const settings = {
     dots: false,
     infinite: true,

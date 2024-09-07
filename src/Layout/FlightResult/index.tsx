@@ -5,11 +5,9 @@ import FlightResultWrapper from "./Component/FlightResultWrapper";
 
 function Index() {
   return (
-    <>
       <div>
         <FlightResultWrapper />
       </div>
-    </>
   );
 }
 

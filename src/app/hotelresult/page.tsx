@@ -6,7 +6,7 @@ import Header from "@/Layout/GLobal/Header";
 import NewsLetter from "@/Layout/GLobal/NewsLetter";
 import Footer from "@/Layout/GLobal/Footer";
 
-function HotelResult() {
+function HotelResult() { 
   return (
     <div>
       <Header />

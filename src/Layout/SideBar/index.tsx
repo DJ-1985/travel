@@ -1,15 +1,15 @@
 "use client";
- 
+
 import React from "react";
-import Accordion from "react-bootstrap/Accordion";
-import Form from "react-bootstrap/Form";
-import Image from "react-bootstrap/Image";
-import ListGroup from "react-bootstrap/ListGroup";
+import {Accordion,Form,Image,ListGroup} from "react-bootstrap";
 import Link from "next/link";
 import styles from "@/styles/SideBar/SideBar.module.scss";
 import MultiRangeSlider from "@/Layout/SideBar/MultiRangeSlider";
- 
-function SideBar() {
+
+type FormCheckType = 'checkbox' | 'radio';
+
+const SideBar: React.FC = () => {
+  const checkType: FormCheckType = 'checkbox';
   return (
     <div className={styles.SideBarBlock}>
       <Accordion defaultActiveKey="10">
@@ -20,7 +20,21 @@ function SideBar() {
           </Accordion.Header>
           <Accordion.Body className={styles.TitleAccordionBody}>
             <div className={styles.SideBarAccordianBlock}>
-              <Accordion defaultActiveKey={['1','2','3','4','5','6','7','8','9','10']} alwaysOpen>
+              <Accordion
+                defaultActiveKey={[
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                ]}
+                alwaysOpen
+              >
                 <Accordion.Item eventKey="1" className={styles.CustomAccordion}>
                   <Accordion.Header className={styles.CustomAccordionHdr}>
                     Your budget (per night)
@@ -29,11 +43,13 @@ function SideBar() {
                     <div className={styles.CustompPrice}>₹ 500 – ₹ 10,000+</div>
                     <div className={styles.SideCheckList}>
                       <div className={styles.RangeBar}>
-                      <MultiRangeSlider
-                    min={0}
-                    max={1000}
-                    onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
-                  />
+                        <MultiRangeSlider
+                          min={0}
+                          max={1000}
+                          onChange={({ min, max }) =>
+                            console.log(`min = ${min}, max = ${max}`)
+                          }
+                        />
                       </div>
                     </div>
                   </Accordion.Body>
@@ -46,7 +62,7 @@ function SideBar() {
                   <Accordion.Body className={styles.CustomAccordionBody}>
                     <div className={styles.SideCheckList}>
                       <Form className={styles.ListCheckList}>
-                        {["checkbox"].map((type) => (
+                        {[checkType].map((type) => (
                           <div key={`inline-${type}`}>
                             <Form.Check
                               type={type}
@@ -126,7 +142,7 @@ function SideBar() {
                   <Accordion.Body className={styles.CustomAccordionBody}>
                     <div className={styles.SideCheckList}>
                       <Form className={styles.ListCheckList}>
-                        {["checkbox"].map((type) => (
+                        {[checkType].map((type) => (
                           <div key={`inline-${type}`}>
                             <Form.Check
                               type={type}
@@ -184,31 +200,62 @@ function SideBar() {
                   <Accordion.Body className={styles.CustomAccordionBody}>
                     <div className={styles.SideCheckList}>
                       <Form className={styles.ListCheckList}>
-                        {["checkbox"].map((type) => (
+                        {[checkType].map((type) => (
                           <div key={`inline-${type}`}>
-                            <Form.Check type={type} id={`inline-${type}-11`} className={styles.CustomCHK}>
+                            <Form.Check
+                              type={type}
+                              id={`inline-${type}-11`}
+                              className={styles.CustomCHK}
+                            >
                               <Form.Check.Input type={type} isValid />
                               <Form.Check.Label>{`Hotel`}</Form.Check.Label>
-                              <Form.Control.Feedback type="valid" className={styles.SubText}><p>1235</p></Form.Control.Feedback>
+                              <Form.Control.Feedback
+                                type="valid"
+                                className={styles.SubText}
+                              >
+                                <p>1235</p>
+                              </Form.Control.Feedback>
                             </Form.Check>
 
-                            <Form.Check type={type} id={`inline-${type}-12`} className={styles.CustomCHK}>
+                            <Form.Check
+                              type={type}
+                              id={`inline-${type}-12`}
+                              className={styles.CustomCHK}
+                            >
                               <Form.Check.Input type={type} isValid />
                               <Form.Check.Label>{`Resort`}</Form.Check.Label>
-                              <Form.Control.Feedback type="valid" className={styles.SubText}><p>569</p></Form.Control.Feedback>
+                              <Form.Control.Feedback
+                                type="valid"
+                                className={styles.SubText}
+                              >
+                                <p>569</p>
+                              </Form.Control.Feedback>
                             </Form.Check>
 
-                            <Form.Check type={type} id={`inline-${type}-13`} className={styles.CustomCHK}>
+                            <Form.Check
+                              type={type}
+                              id={`inline-${type}-13`}
+                              className={styles.CustomCHK}
+                            >
                               <Form.Check.Input type={type} isValid />
                               <Form.Check.Label>{`Guest house`}</Form.Check.Label>
-                              <Form.Control.Feedback type="valid" className={styles.SubText}><p>976</p></Form.Control.Feedback>
+                              <Form.Control.Feedback
+                                type="valid"
+                                className={styles.SubText}
+                              >
+                                <p>976</p>
+                              </Form.Control.Feedback>
                             </Form.Check>
                           </div>
                         ))}
                       </Form>
                       <Link href={"#_"} className={styles.ShowMore}>
                         Show all
-                        <Image src="/assets/show-more-arrow.png" className={`ms-2`} alt="img"/>
+                        <Image
+                          src="/assets/show-more-arrow.png"
+                          className={`ms-2`}
+                          alt="img"
+                        />
                       </Link>
                     </div>
                   </Accordion.Body>
@@ -221,7 +268,7 @@ function SideBar() {
                   <Accordion.Body className={styles.CustomAccordionBody}>
                     <div className={styles.SideCheckList}>
                       <Form className={styles.ListCheckList}>
-                        {["checkbox"].map((type) => (
+                        {[checkType].map((type) => (
                           <div key={`inline-${type}`}>
                             <Form.Check
                               type={type}
@@ -308,7 +355,7 @@ function SideBar() {
                   <Accordion.Body className={styles.CustomAccordionBody}>
                     <div className={styles.SideCheckList}>
                       <Form className={styles.ListCheckList}>
-                        {["checkbox"].map((type) => (
+                        {[checkType].map((type) => (
                           <div key={`inline-${type}`}>
                             <Form.Check
                               type={type}
@@ -374,7 +421,7 @@ function SideBar() {
                   <Accordion.Body className={styles.CustomAccordionBody}>
                     <div className={styles.SideCheckList}>
                       <Form className={styles.ListCheckList}>
-                        {["checkbox"].map((type) => (
+                        {[checkType].map((type) => (
                           <div key={`inline-${type}`}>
                             <Form.Check
                               type={type}
@@ -418,7 +465,7 @@ function SideBar() {
                   <Accordion.Body className={styles.CustomAccordionBody}>
                     <div className={styles.SideCheckList}>
                       <Form>
-                        {["checkbox"].map((type) => (
+                        {[checkType].map((type) => (
                           <div key={`inline-${type}`}>
                             <Form.Check
                               type={type}
@@ -486,7 +533,9 @@ function SideBar() {
                               <Image src="/assets/sunrise-icon.png" alt="img" />
                               <span>00:00 to 06:00</span>
                             </ListGroup.Item>
-                            <ListGroup.Item className={`${styles.ListItem} ${styles.Active}`}>
+                            <ListGroup.Item
+                              className={`${styles.ListItem} ${styles.Active}`}
+                            >
                               <Image src="/assets/sun-icon.png" alt="img" />
                               <span>06:00 to 12:00</span>
                             </ListGroup.Item>
@@ -528,14 +577,17 @@ function SideBar() {
                   </Accordion.Body>
                 </Accordion.Item>
 
-                <Accordion.Item eventKey="10" className={styles.CustomAccordion}>
+                <Accordion.Item
+                  eventKey="10"
+                  className={styles.CustomAccordion}
+                >
                   <Accordion.Header className={styles.CustomAccordionHdr}>
                     Airlines
                   </Accordion.Header>
                   <Accordion.Body className={styles.CustomAccordionBody}>
                     <div className={styles.SideCheckList}>
                       <Form className={styles.ListCheckList}>
-                        {["checkbox"].map((type) => (
+                        {[checkType].map((type) => (
                           <div key={`inline-${type}`}>
                             <Form.Check
                               type={type}
@@ -583,13 +635,12 @@ function SideBar() {
                         ))}
                       </Form>
                       <Link href={"#_"} className={styles.ShowMore}>
-                      Show all
+                        Show all
                         <Image src="/assets/show-more-arrow.png" alt="img" />
                       </Link>
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>
-
               </Accordion>
             </div>
           </Accordion.Body>

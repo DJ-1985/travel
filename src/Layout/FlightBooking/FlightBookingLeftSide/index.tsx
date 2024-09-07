@@ -32,7 +32,7 @@ function FlightBookingLeftSide() {
                  <Image src="/assets/user.png" className={"me-3"} alt="img"/> Traveller 1: Adult
               </div> 
               <Form>
-                <Row>
+                <Row> 
                   <Col md={4}>
                     <Form.Group className="mb-3">
                       <Form.Label className={styles.FormLabel}>First names*</Form.Label>
@@ -57,7 +57,7 @@ function FlightBookingLeftSide() {
                     </Col>
                 </Row>             
               </Form>
-              <p>Enter exactly what's written on this traveller's travel document</p>
+              <p>Enter exactly what&apos;s written on this traveller&apos;s travel document</p>
             </Card>
             <div className={`${styles.WeightBox} d-flex flex-wrap align-items-center`}>           
               {['checkbox'].map((type) => (
@@ -102,7 +102,7 @@ function FlightBookingLeftSide() {
                     </Col>
                 </Row>             
               </Form>
-              <p>Enter exactly what's written on this traveller's travel document</p>
+              <p>Enter exactly what&apos;s written on this traveller&apos;s travel document</p>
             </Card>
             <div className={`${styles.WeightBox} d-flex flex-wrap align-items-center`}>           
               {['checkbox'].map((type) => (

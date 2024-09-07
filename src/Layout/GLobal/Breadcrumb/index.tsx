@@ -12,7 +12,7 @@ function SiteBreadcrumb() {
         <Breadcrumb.Item href="#">Delhi NCR</Breadcrumb.Item>
         <Breadcrumb.Item href="#">New Delhi</Breadcrumb.Item>
         <Breadcrumb.Item active>Search results</Breadcrumb.Item>
-      </Breadcrumb> 
+      </Breadcrumb>
   );
 }
 
