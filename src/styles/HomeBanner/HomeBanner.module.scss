@@ -34,7 +34,7 @@
             width: 250px;
             background-size: cover;
           }
-        } 
+        }
       }
     }
     h6 {
@@ -44,6 +44,8 @@
     }
   }
   .HomeSearch {
+    position: relative;
+    z-index: 5;
     .TabNav {
       border: none;
       display: flex;
@@ -341,7 +343,7 @@
               }
             }
           }
-          &.bdrNone{
+          &.bdrNone {
             border-right: none;
           }
           &.FrmWd4 {
@@ -607,6 +609,21 @@
         .Bdr0 {
           border: none !important;
         }
+        &.cruiseSrchBox {
+          .FrmWd1 {
+            width: 25%;
+          }
+          .FrmWd2 {
+            width: 25%;
+          }
+          .FrmWd3 {
+            width: 25%;
+          }
+          .FrmWd4 {
+            width: 25%;
+            border-right: none;
+          }
+        }
       }
       .SearchBtnBlock {
         @media (max-width: $lg) {
@@ -677,6 +694,285 @@
         }
         label {
           font-size: $mpl + 4;
+        }
+      }
+    }
+
+    .multicitySrchOuter {
+      background-color: #fff;
+      border-radius: 10px;
+      @media (max-width: $md) {
+        border-radius: 0 0 10px 10px;
+      }
+      .multicitySrcLoopCard {
+        margin: 0;
+        border-bottom: 1px solid rgb(235, 230, 222);
+        position: relative;
+        @media (max-width: $md) {
+          border-color: $orange;
+        }
+        .FormCard {
+          flex: auto;
+          border-right: solid 1px #ebe6de;
+          position: relative;
+          padding: 8px 15px 0;
+          @media (max-width: $md) {
+            border-bottom: solid 1px #ebe6de;
+          }
+          .SrchLabel {
+            margin: 0;
+            font-size: 13px;
+          }
+          .SrchInput {
+            height: 32px;
+            line-height: 32px;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: transparent;
+            width: 100%;
+            outline: none;
+          }
+          &.FrmWd1 {
+            margin: 0;
+          }
+          &.FrmWd2 {
+            margin: 0;
+          }
+          &.FrmWd3 {
+            margin: 0;
+          }
+        }
+        .srchCloseBtn {
+          margin: 0;
+          width: 70px;
+          @media (max-width: $md) {
+            width: 18px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            height: 18px;
+          }
+          a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      .multicitySrchBtm {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        @media (max-width: $md) {
+          display: block;
+        }
+        .FormTrvlCard {
+          margin: 0;
+          width: 30%;
+          @media (max-width: $md) {
+            width: 100%;
+          }
+          .TrvlBtn {
+            background: transparent;
+            border: solid 1px #ebe6de;
+            padding: 5px 15px;
+            width: 100%;
+            color: #000000;
+            white-space: inherit;
+            text-align: left;
+            font-size: 13px;
+            position: relative;
+            height: auto;
+            border-radius: 10px;
+            &:after {
+              border: none;
+              background: url(/_next/static/media/arrow2.fbf59347.png) no-repeat
+                center center;
+              width: 16px;
+              height: 9px;
+              position: absolute;
+              top: 27px;
+              right: 15px;
+              content: "";
+              margin: 0;
+            }
+            span {
+              display: block;
+              padding: 3px 0 0;
+              font-size: 14px;
+            }
+          }
+          .TrvlDropDown {
+            border-radius: 0;
+            right: auto !important;
+            transform: inherit !important;
+            left: 0 !important;
+            top: 100% !important;
+            margin: 10px 0 0 !important;
+            border: none;
+            padding: 0;
+            min-width: 390px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            z-index: 5;
+            @media (max-width: $xl) {
+              min-width: 320px;
+            }
+            @media (max-width: $md) {
+              min-width: inherit;
+              width: 100%;
+            }
+            .TrvlTopBox {
+              padding: 20px;
+              background-color: #fff;
+              max-height: 300px;
+              overflow-y: auto;
+              @media (max-width: $xl) {
+                padding: 10px;
+                p {
+                  font-size: 12px;
+                  line-height: normal;
+                }
+              }
+              .inputPrdBlock {
+                margin: 0 0 15px;
+                @media (max-width: $xl) {
+                  margin: 0 0 12px;
+                }
+                label {
+                  margin: 0;
+                  display: flex;
+                  align-items: center;
+                  @media (max-width: $xl) {
+                    font-size: 13px;
+                  }
+                  img {
+                    padding-right: 10px;
+                  }
+                }
+                .grpOuter {
+                  margin: 0;
+                  width: 152px;
+                  border: 1px solid #ddd;
+                  border-radius: 8px;
+                  flex-wrap: inherit;
+                  align-items: center;
+                  overflow: hidden;
+                  input {
+                    margin: 0;
+                    border: none;
+                    border-left: 1px solid #ddd;
+                    border-right: 1px solid #ddd;
+                    padding: 0;
+                    width: 70px;
+                    @media (max-width: $xl) {
+                      height: 40px;
+                    }
+                  }
+                  button {
+                    margin: 0;
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                    padding: 0;
+                    font-size: 20px;
+                    width: 40px;
+                    height: 50px;
+                    background-color: #fff;
+                    @media (max-width: $xl) {
+                      height: 40px;
+                    }
+                    &:hover {
+                      background-color: #21afbc;
+                    }
+                  }
+                }
+              }
+              .sltdPrdBlock {
+                display: flex;
+                flex-wrap: wrap;
+                .wdEqual {
+                  width: 46%;
+                  margin: 0 2% 10px;
+                  select {
+                    width: 100%;
+                    font-size: 13px;
+                    outline: none;
+                    box-shadow: none;
+                    margin: 0;
+                    height: 40px;
+                  }
+                }
+              }
+            }
+            .TrvlBtmBox {
+              background-color: #f2f2f2;
+              padding: 20px;
+              text-align: right;
+              @media (max-width: $xl) {
+                padding: 10px;
+              }
+            }
+            .ApplyBtn {
+              height: 50px;
+              line-height: 50px;
+              border-radius: 50px;
+              min-width: 150px;
+              background-color: $green;
+              border-color: $green;
+              padding: 0;
+              @media (max-width: $xl) {
+                height: 40px;
+                line-height: 40px;
+                min-width: 100px;
+                font-size: 14px;
+              }
+              &:hover {
+                background: $blue;
+                color: $white;
+              }
+            }
+          }
+        }
+        .btnOuter {
+          display: flex;
+          align-items: center;
+          @media (max-width: $md) {
+            justify-content: space-between;
+            margin-top: 15px;
+          }
+          .addMoreBtn {
+            font-size: 16px;
+            font-weight: 600;
+            color: $green;
+            margin-right: 25px;
+            @media (max-width: $md) {
+              font-size: 13px;
+              margin: 0;
+            }
+            &:hover {
+              color: $black;
+            }
+          }
+          .multicitySrchBtn {
+            background: #023047;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 400;
+            text-transform: uppercase;
+            padding: 10px 30px;
+            &:hover {
+              background: $orange;
+            }
+          }
         }
       }
     }

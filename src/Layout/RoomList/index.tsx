@@ -7,7 +7,7 @@ function RoomListing() {
   const [selectedOption, setSelectedOption] = useState('6');
   const handleChange = (event:any) => {
     setSelectedOption(event.target.id);
-  };
+  }; 
  
   return ( 
     <div className={styles.RoomListPanel}>

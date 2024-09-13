@@ -639,7 +639,168 @@ function HomeBanner() {
                   </div>
                 </div>
               </Tab.Pane>
-              <Tab.Pane eventKey="Cruises">Cruises</Tab.Pane>
+              <Tab.Pane eventKey="Cruises">
+              <div className={`${styles.SearchCardBlock} d-md-flex justify-content-between`}>
+                  <div className={`${styles.SearchCardBlockLeft} ${styles.cruiseSrchBox} d-md-flex`}>
+                    <div className={`${styles.FormCard} ${styles.FrmWd1}`}>
+                      <Form>
+                        <Form.Group controlId="from1">
+                          <Form.Label className={styles.SrchLabel}>
+                            From
+                          </Form.Label>
+                          <Form.Control
+                            type="text"
+                            placeholder="New Delhi (DEL), India"
+                            className={styles.SrchInput}
+                          />
+                        </Form.Group>
+                      </Form>
+                    </div>
+                    <div className={`${styles.FormCard} ${styles.FrmWd2}`}>
+                      <Form>
+                        <Form.Group controlId="to1">
+                          <Form.Label className={styles.SrchLabel}>
+                            To
+                          </Form.Label>
+                          <Form.Control
+                            type="text"
+                            placeholder="Mumbai (BOM), India"
+                            className={styles.SrchInput}
+                          />
+                        </Form.Group>
+                      </Form>
+                    </div>
+                    <div className={`${styles.FormCard} ${styles.FrmWd3} d-md-flex`}>
+                      <div
+                        className={`${styles.FormCardDT} ${styles.FrmWdDT1}`}
+                      >
+                        <Form>
+                          <Form.Group controlId="departure1">
+                            <Form.Label className={styles.SrchLabel}>
+                              Departure
+                            </Form.Label>
+                            <DatePicker
+                              selected={checkInDate}
+                              onChange={(date) => setCheckInDate(date)}
+                              selectsStart
+                              startDate={checkInDate  || undefined}
+                              endDate={checkOutDate  || undefined}
+                              monthsShown={1}
+                              placeholderText="Select Date"
+                              className={styles.SrchInput}
+                            />
+                          </Form.Group>
+                        </Form>
+                      </div>
+                    </div>
+                    <div className={`${styles.FormCard} ${styles.FrmWd4}`}>
+                      <Dropdown>
+                        <Dropdown.Toggle
+                          id="TravellersDropdown"
+                          className={styles.TrvlBtn}
+                        >
+                          Travellers <span>2 Adults</span>
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu className={styles.TrvlDropDown}>
+                          <div className={styles.TrvlTopBox}>
+                            <Form.Group
+                              className={`${styles.inputPrdBlock} d-flex align-items-center justify-content-between`}
+                            >
+                              <Form.Label htmlFor="">
+                                <Image src="/assets/icon14.png" alt="" /> Adults
+                              </Form.Label>
+                              <InputGroup className={styles.grpOuter}>
+                                <Button
+                                  variant="outline-secondary"
+                                  onClick={handleDecrement}
+                                >
+                                  -
+                                </Button>
+                                <FormControl
+                                  type="text"
+                                  value={value}
+                                  onChange={handleChange}
+                                  style={{ textAlign: "center" }}
+                                />
+                                <Button
+                                  variant="outline-secondary"
+                                  onClick={handleIncrement}
+                                >
+                                  +
+                                </Button>
+                              </InputGroup>
+                            </Form.Group>
+                            <Form.Group
+                              className={`${styles.inputPrdBlock} d-flex align-items-center justify-content-between`}
+                            >
+                              <Form.Label htmlFor="">
+                                <Image src="/assets/icon15.png" alt="" />{" "}
+                                Children
+                              </Form.Label>
+                              <InputGroup className={styles.grpOuter}>
+                                <Button
+                                  variant="outline-secondary"
+                                  onClick={handleDecrement}
+                                >
+                                  -
+                                </Button>
+                                <FormControl
+                                  type="text"
+                                  value={value}
+                                  onChange={handleChange}
+                                  style={{ textAlign: "center" }}
+                                />
+                                <Button
+                                  variant="outline-secondary"
+                                  onClick={handleIncrement}
+                                >
+                                  +
+                                </Button>
+                              </InputGroup>
+                            </Form.Group>
+
+                            <Form.Group
+                              className={`${styles.sltdPrdBlock} d-flex align-items-center justify-content-between`}
+                            >
+                              <Form.Select aria-label="Select Age">
+                                <option>Select Age</option>
+                                <option value="1">1 Years old</option>
+                                <option value="2">2 Years old</option>
+                                <option value="3">3 Years old</option>
+                              </Form.Select>
+                              <Form.Select aria-label="Select Age">
+                                <option>Select Age</option>
+                                <option value="1">1 Years old</option>
+                                <option value="2">2 Years old</option>
+                                <option value="3">3 Years old</option>
+                              </Form.Select>
+                            </Form.Group>
+                            <p>
+                              <small>
+                                Please provide right number of children along
+                                with their right age for best options and
+                                prices.
+                              </small>
+                            </p>
+                          </div>
+                          <div className={styles.TrvlBtmBox}>
+                            <Button className={styles.ApplyBtn}>Apply</Button>
+                          </div>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </div>
+                  </div>
+                  <div className={styles.SearchBtnBlock}>
+                    <Button className={`${styles.SrchBtn} btn-overlay`}>
+                      <Image src="/assets/search-icon.png" alt="" />
+                      <span>Search</span>
+                      <div className={"btn-ldr"}>
+                        <Image src="/assets/loader.gif" alt="" />
+                      </div>
+                    </Button>
+                  </div>
+              </div>
+              </Tab.Pane>
             </Tab.Content>
           </Tab.Container>
         </div>

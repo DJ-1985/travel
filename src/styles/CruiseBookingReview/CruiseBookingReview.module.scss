@@ -1,0 +1,272 @@
+@import "../variables.scss";
+
+.cruiseBkgRvwOuter {
+  padding: 20px 0 40px;
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .cruiseBkgRvwLt {
+    flex: 0 0 70%;
+    max-width: 70%;
+    font-size: 12px;
+    @media (max-width: $lg) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .bkgDate {
+      color: $green;
+      margin: 0 0 12px;
+    }
+    .cruiseBkgRvwCard {
+      border: solid 1px #d5e0eb;
+      border-radius: 10px;
+      padding: 25px;
+      background-color: #fff;
+      margin: 0 0 20px;
+      @media (max-width: $md) {
+        padding: 15px;
+      }
+      .rvwTopBox {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $md) {
+          display: block;
+        }
+        .rvwTopBoxLt {
+          flex: 0 0 auto;
+          padding-right: 15px;
+          max-width: 52%;
+          @media (max-width: $md) {
+            max-width: 100%;
+            padding: 0 0 20px;
+          }
+          .srvcList {
+            margin: 0 0 15px;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            li {
+              margin: 0 0 8px;
+              padding: 0;
+              border: none;
+              border-radius: 0;
+              display: flex;
+              align-items: center;
+              font-size: 12px;
+              img {
+                margin-right: 8px;
+              }
+            }
+          }
+          .chooseInfo {
+            display: flex;
+            align-items: center;
+            color: $green;
+            margin: 15px 0;
+            img {
+              margin-right: 10px;
+            }
+          }
+          .prcOffer {
+            background-color: $green;
+            color: $white;
+            padding: 8px 15px;
+            border-radius: 40px;
+            font-size: 12px;
+            display: inline-flex;
+            align-items: center;
+            margin: 0 0 15px;
+            img {
+              margin-right: 10px;
+            }
+          }
+          .RoomFinalPriceRow {
+            .RoomFinalPriceLeft {
+              flex: 1 1;
+              @media (max-width: $md) {
+                width: 100%;
+                flex: inherit;
+                margin-bottom: 15px;
+              }
+              @media (max-width: $sm) {
+                width: auto;
+                flex: 1;
+                margin-bottom: 0;
+              }
+              .RoomFinalPriceBig {
+                font-size: 16px;
+                color: $green;
+              }
+              .RoomFinalPriceSmall {
+                font-size: 12px;
+              }
+              .TaxesText {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .rvwTopBoxRt {
+          width: 290px;
+          min-width: 290px;
+          @media (max-width: $md) {
+            width: 100%;
+            min-width: 100%;
+          }
+          img {
+            width: 100%;
+            display: block;
+            border-radius: 15px;
+          }
+        }
+      }
+      .roomBundleCard {
+        background-color: #f9f9f9;
+        border: solid 1px #d5e0eb;
+        border-radius: 10px;
+        padding: 20px 20px 60px 20px;
+        margin: 0 0 20px;
+        height: calc(100% - 20px);
+        position: relative;
+        @media (max-width: $md) {
+          height: auto;
+          padding: 15px;
+        }
+        .cardPrc {
+          color: $green;
+          font-size: 22px;
+          font-weight: 600;
+          margin: 0 0 3px;
+        }
+        .roomBundleList {
+          margin: 0 0 10px;
+          padding: 0;
+          border: none;
+          border-radius: 0;
+          background-color: transparent;
+          li {
+            margin: 0 0 10px;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            img {
+              margin-right: 10px;
+            }
+          }
+        }
+        .lineBtn {
+          position: absolute;
+          left: 20px;
+          bottom: 20px;
+          @media (max-width: $md) {
+            position: relative;
+            left: auto;
+            bottom: auto;
+          }
+        }
+      }
+    }
+    .deckCard {
+      border: solid 1px #d5e0eb;
+      border-radius: 10px;
+      padding: 25px;
+      background-color: #fff;
+      @media (max-width: $md) {
+        padding: 15px;
+      }
+      .deckCardInr {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: $md) {
+          display: block;
+        }
+        .deckCardInfo {
+          flex: 0 0 60%;
+          display: flex;
+          align-items: center;
+          @media (max-width: $md) {
+            margin: 0 0 10px;
+          }
+          img {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+    .lineBtn {
+      color: $green;
+      border: 1px solid $green;
+      display: inline-block;
+      background: url(../../../public/assets/right_arrow.png) no-repeat right
+        15px center;
+      padding: 10px 50px 10px 15px;
+      border-radius: 40px;
+      transition: all 0.3s ease;
+      &:hover {
+        background-position: right 7px center;
+      }
+    }
+  }
+  .cruiseBkgRvwRt {
+    flex: 0 0 30%;
+    max-width: 30%;
+    @media (max-width: $lg) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 20px;
+    }
+    .prcSummaryCard {
+      border: solid 1px $graylightbdr;
+      border-radius: 10px;
+      padding: 15px 25px 25px;
+      background-color: $white;
+      font-size: 12px;
+      @media (max-width: $xl) {
+        padding: 0 15px 15px;
+      }
+      .prcFare {
+        font-size: 22px;
+        font-weight: 600;
+        color: $green;
+        margin: 10px 0 0;
+        @media (max-width: $xl) {
+          font-size: 18px;
+        }
+        span {
+          display: block;
+          font-size: 12px;
+          color: #000;
+        }
+      }
+      h4 {
+        margin: 0 0 5px;
+        font-size: 14px;
+      }
+      table {
+        tr {
+          td {
+            padding: 8px 0;
+            font-size: 12px;
+          }
+        }
+        &.tblTotal {
+          tr {
+            td {
+              background-color: #eff9fa;
+              padding: 10px;
+              font-size: 14px;
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

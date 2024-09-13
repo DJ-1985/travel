@@ -340,12 +340,14 @@
         }
         .reviewImg {
           width: 200px;
+          img {
+            width: 100%;
+            display: block;
+            height: 100%;
+            object-fit: cover;
+          }
           @media (max-width: $md) {
             width: 100%;
-            img {
-              width: 100%;
-              display: block;
-            }
           }
         }
         .reviewInfo {
@@ -499,9 +501,15 @@
       overflow: hidden;
       margin-top: 15px;
       position: relative;
+      height: 260px;
+      @media (max-width: $md) {
+        height: 130px;
+      }
       img {
         width: 100%;
         display: block;
+        height: 100%;
+        object-fit: cover;
       }
     }
     .bookingBnrInfo {
@@ -1032,9 +1040,15 @@
       .hotelMainBnr {
         border-radius: 14px 14px 0 0;
         overflow: hidden;
+        height: 260px;
+        @media (max-width: $md) {
+          height: 130px;
+        }
         img {
           width: 100%;
           display: block;
+          height: 100%;
+          object-fit: cover;
         }
       }
       .hotelBnrInfo {
@@ -1134,14 +1148,18 @@
         .roomInfoInnerLt {
           width: 96px;
           min-width: 96px;
+          height: 90px;
           @media (max-width: $md) {
             width: 80px;
             min-width: 80px;
+            height: 75px;
           }
           img {
             width: 100%;
             display: block;
             border-radius: 10px;
+            height: 100%;
+            object-fit: cover;
           }
         }
         .roomInfoInnerRt {
@@ -1421,11 +1439,15 @@
           width: 124px;
           margin-right: 20px;
           min-width: 124px;
+          height: 120px;
           @media (max-width: $md) {
             margin: 0 auto;
           }
           img {
             border-radius: 5px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
         }
         .bkgCardMidRt {

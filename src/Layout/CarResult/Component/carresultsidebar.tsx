@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Accordion, Form, Image, ListGroup } from "react-bootstrap";
-import Link from "next/link";
 import styles from "@/styles/CarResult/Component/carresultsidebar.module.scss";
 import MultiRangeSlider from "@/Layout/SideBar/MultiRangeSlider";
 

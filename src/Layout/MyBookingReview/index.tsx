@@ -286,11 +286,7 @@ function MyBookingReviewPage() {
       </Container>
 
       {/* Add Your Review Form Popup Start Here */}
-      <div
-        className={`${styles.reviewSidePopup} ${
-          isOpenA ? styles.sidePopupOpen : ""
-        }`}
-      >
+      <div className={`${styles.reviewSidePopup} ${isOpenA ? styles.sidePopupOpen : ""}`}>
         <div className={styles.reviewHd}>Submit Review </div>
         <a className={styles.reviewPopupClsBtn} onClick={togglePopup}>
           <Image src="/assets/close-icon.png" alt="" />

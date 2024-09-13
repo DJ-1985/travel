@@ -100,7 +100,7 @@ function CarDetailPage() {
     setValue((prevValue) => (prevValue > 0 ? prevValue - 1 : 0)); // prevents negative values
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = parseInt(e.target.value, 10);
     setValue(isNaN(newValue) ? 0 : newValue);
   };
@@ -120,6 +120,7 @@ function CarDetailPage() {
 
   return (
     <div className={styles.carDetailWrapper}>
+
       <Container>
         <Row>
           <Col className={styles.carDtllt}>
@@ -739,6 +740,7 @@ function CarDetailPage() {
         </Modal.Body>
       </Modal>
     </div>
+
   );
 }
 
